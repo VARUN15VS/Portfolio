@@ -52,7 +52,7 @@ body {
     background-color: #444;
     color: white;
 }
-.intro {
+.intro , .contact{
     display: flex;
     justify-content: space-between;
     padding: 40px;
@@ -81,7 +81,10 @@ body {
     border-radius: 2px;
 }
 .links{
-    display: inline;
+    display: flex;
+}
+.links div{
+    margin: 10px;
 }
 #linkimg{
     display: flex;
@@ -269,6 +272,59 @@ body {
 }
 .oddcontent{
     display: flex;
+}
+
+/*Contact Form*/
+.contact{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.contactright{
+    display: flex;
+    justify-content: left;
+    padding-left: 10px;
+}
+.contactleft div{
+    margin-bottom: 30px;
+}
+.contactleft h3{
+    font-size: 1.6rem;
+    color: #00f0ff;
+    margin-bottom: 5px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.contactleft p{
+    margin-top: 0px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.othercontact{
+    display: flex;
+    flex-direction: column;
+}
+.othercontact div{
+    margin-bottom: 5px;
+}
+.input-line {
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    width: 100%;
+    font-size: 16px;
+    padding: 5px 0;
+    background: transparent;
+    color: white;
+}
+.input-line::placeholder {
+    color: #aaa;
+}
+.contactright h3{
+    font-size: 1.6rem;
+    color: #00f0ff;
+    margin-bottom: 5px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.contactright button{
+    margin: 40px;
 }
 @media (max-width: 768px) {
     .photo {
