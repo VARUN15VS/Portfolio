@@ -80,6 +80,15 @@ body {
     color: #00f0ff;
     border-radius: 2px;
 }
+.links{
+    display: inline;
+}
+#linkimg{
+    display: flex;
+    width: 30px;
+    height: 30px;
+    margin-bottom: 10px;
+}
 /* Skills section */
 .myskill {
     display: flex;
@@ -192,20 +201,74 @@ body {
     flex-direction: column;
     width: 100%;
 }
-.cono{
+.projectdetails{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     background-color: #09090b;
     padding: 20px;
     border-radius: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
-.conoheading h4{
+.evenheading h4{
     font-size: 1.6rem;
     color: #00f0ff;
     margin-top: 5px;
     border-radius: 2px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.evencontent{
+    display: flex;
+}
+.projectimg{
+    display: flex;
+    width: 200px;
+    height: 200px;
+}
+.aboutproject{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+}
+.projectbutton{
+    display: flex;
+    justify-content: flex-end;
+    height: 50px;
+    padding-right: 50px;
+}
+.gotocono{
+    width: 150px;
+    height: 50px;
+    background-color: #09090b;
+    color: #00f0ff;
+    border: 2px solid #00f0ff;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff;
+}
+.gotocono:hover {
+    background-color: #00f0ff;
+    color: #09090b;
+    box-shadow: 0 0 20px #00f0ff, 0 0 40px #00f0ff;
+}
+.oddheading{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 10px;
+}
+.oddheading h4{
+    font-size: 1.6rem;
+    color: #00f0ff;
+    margin-top: 5px;
+    border-radius: 2px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.oddcontent{
+    display: flex;
 }
 @media (max-width: 768px) {
     .photo {
