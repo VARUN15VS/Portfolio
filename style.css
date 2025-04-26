@@ -48,6 +48,9 @@ body {
     font-weight: bold;
     transition: 0.3s;
 }
+.home{
+    color: #00f0ff;
+}
 .navbuttons button:hover {
     background-color: #444;
     color: white;
@@ -86,11 +89,9 @@ body {
 .links div{
     margin: 10px;
 }
-#linkimg{
+.links a{
     display: flex;
-    width: 30px;
-    height: 30px;
-    margin-bottom: 10px;
+    color: #00f0ff;
 }
 /* Skills section */
 .myskill {
