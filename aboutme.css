@@ -96,15 +96,59 @@ body {
     border-radius: 2px;
 }
 .intropara h2{
-    display: flex;
     font-family: sans-serif;
-    font-size: 2.4rem;
+    font-size: 2.6rem;
     font-weight: 700;
+    line-height: 1;
+}
+.intropara h3{
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
     line-height: 1;
 }
 span{
     color: #00f0ff;
     margin-left: 10px;
+}
+.contact{
+    width: 150px;
+    height: 50px;
+    background-color: #09090b;
+    color: #00f0ff;
+    border: 2px solid #00f0ff;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff;
+    margin-left: 10px;
+}
+.contact:hover{
+    background-color: #00d0dd;
+    color: #09090b;
+    box-shadow: 0 0 20px #00d0dd, 0 0 40px #00d0dd;
+}
+.hire{
+    width: 150px;
+    height: 50px;
+    background-color: #00f0ff;
+    color: #09090b;
+    border: 2px solid #09090b;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 0 10px #09090b, 0 0 20px #09090b;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+.hire:hover{
+    background-color: #09090b;
+    color: #00d0dd;
+    box-shadow: 0 0 20px #00d0dd, 0 0 40px #00d0dd;
 }
 
 /*Links*/
