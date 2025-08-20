@@ -1,0 +1,131 @@
+/* cono.css */
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", "Segoe UI", sans-serif;
+}
+
+body {
+  background-color: #0a0a0a;
+  color: #eaeaea;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* Header */
+.main-header {
+  text-align: center;
+  padding: 70px 20px;
+  background: linear-gradient(to right, #0a0a0a, #111);
+}
+
+.main-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #00f5ff, #9d4edd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 2px;
+}
+
+/* Sections */
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 10%;
+  background: linear-gradient(to right, #0a0a0a 65%, transparent 100%);
+}
+
+.section.reverse {
+  flex-direction: row-reverse; /* force reverse */
+  background: linear-gradient(to left, #0a0a0a 65%, transparent 100%);
+}
+
+/* Text Block */
+.text-block {
+  flex: 1;
+  padding: 20px;
+}
+
+.text-block h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #00f5ff, #9d4edd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+}
+
+.text-block h3 {
+  font-size: 1.2rem;
+  color: #cccccc;
+  margin-bottom: 15px;
+  font-weight: 400;
+}
+
+.text-block p {
+  font-size: 1.1rem;
+  color: #d0d0d0;
+  max-width: 600px;
+}
+
+/* Image Block */
+.image-block {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  min-height: 350px;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 245, 255, 0.3);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.image-block:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 40px rgba(157, 78, 221, 0.5);
+}
+
+img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 30px 20px;
+  background: #0a0a0a;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+footer h2 {
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  background: linear-gradient(90deg, #00f5ff, #9d4edd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .section.reverse {
+    flex-direction: column;
+  }
+
+  .image-block {
+    width: 100%;
+    margin-top: 20px;
+  }
+}

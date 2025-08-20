@@ -30,6 +30,8 @@ body {
 }
 .navname {
     font-size: 1.2rem;
+    font-family: 'Times New Roman', Times, serif;
+    color: #00f0ff;
 }
 #nameinnav{
     padding-left: 40px;
@@ -48,12 +50,226 @@ body {
     font-weight: bold;
     transition: 0.3s;
 }
-.home{
-    color: #00f0ff;
-}
 .navbuttons button:hover {
     background-color: #444;
     color: white;
+}
+.aboutmebutton{
+    background-color: #444;
+    color: white;
+}
+
+/*Introduction Section*/
+.intro1{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    margin: 50px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    background-color: #16171c;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+.intro1.intro1:hover{
+    box-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff, 0 0 30px #00f0ff;
+    transition: box-shadow 0.3s ease;
+}
+.intropara1 {
+    flex: 1;
+    padding-right: 20px;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+.photo {
+    width: 300px;
+    height: 300px;
+    background-color: gray;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+#firstintro{
+    display: flex;
+    font-size: 1.6rem;
+    color: #00f0ff;
+    margin-top: 1.5rem;
+    border-radius: 2px;
+}
+.intropara1 h2{
+    font-family: sans-serif;
+    font-size: 2.6rem;
+    font-weight: 700;
+    line-height: 1;
+}
+.intropara1 h3{
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 1;
+}
+span{
+    color: #00f0ff;
+    margin-left: 10px;
+}
+.contact1{
+    width: 150px;
+    height: 50px;
+    background-color: #09090b;
+    color: #00f0ff;
+    border: 2px solid #00f0ff;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff;
+    margin-left: 10px;
+}
+.contact1:hover{
+    background-color: #00d0dd;
+    color: #09090b;
+    box-shadow: 0 0 20px #00d0dd, 0 0 40px #00d0dd;
+}
+.hire1{
+    width: 150px;
+    height: 50px;
+    background-color: #00f0ff;
+    color: #09090b;
+    border: 2px solid #09090b;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 0 10px #09090b, 0 0 20px #09090b;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+.hire1:hover{
+    background-color: #09090b;
+    color: #00d0dd;
+    box-shadow: 0 0 20px #00d0dd, 0 0 40px #00d0dd;
+}
+.photo {
+    width: 300px;
+    height: 300px;
+    background-color: gray;
+    border-radius: 50%;
+    border: #00d0dd 5px solid;
+    flex-shrink: 0;
+    overflow: hidden; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/*Links*/
+.firstlinks1{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0px;
+    margin-top: 15px;
+}
+.sublinks1{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    width: auto;
+    margin: 50px;
+    margin-top: 20px;
+    background-color: #16171c;
+    border-radius: 20px;
+}
+.links1{
+    display: flex;
+}
+.links1 div{
+    margin: 10px;
+}
+.links1 a{
+    display: flex;
+    color: #00f0ff;
+}
+/* Journey Section */
+.journey {
+  margin: 60px auto;
+  padding: 40px;
+  max-width: 900px;
+  background: #16171c;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.2);
+}
+
+.journey-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #00d1e0; /* slightly dimmer cyan */
+  margin-bottom: 40px;
+  text-shadow: 0 0 6px rgba(0, 240, 255, 0.6), 
+               0 0 12px rgba(0, 240, 255, 0.4);
+}
+.timeline {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  border-left: 3px solid #00f0ff;
+}
+
+.timeline-item {
+  margin-bottom: 30px;
+  position: relative;
+  padding-left: 30px;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -11px;
+  top: 8px;
+  width: 20px;
+  height: 20px;
+  background: #00f0ff;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff;
+}
+
+.timeline-content {
+  background: #09090b;
+  padding: 20px;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: translateX(5px);
+  box-shadow: 0 0 15px #00f0ff, 0 0 25px #00f0ff;
+}
+
+.timeline-content h3 {
+  margin: 0;
+  color: #00f0ff;
+  font-size: 1.3rem;
+}
+
+.timeline-content .time {
+  display: block;
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-bottom: 10px;
+}
+
+.timeline-content p {
+  margin: 0;
+  line-height: 1.6;
+  color: #eee;
 }
 .intro , .contact{
     display: flex;
@@ -69,13 +285,6 @@ body {
     padding-right: 20px;
     font-size: 1rem;
     line-height: 1.6;
-}
-.photo {
-    width: 300px;
-    height: 300px;
-    background-color: gray;
-    border-radius: 10px;
-    flex-shrink: 0;
 }
 #firstintro{
     display: flex;
