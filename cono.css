@@ -1,164 +1,214 @@
-/* cono.css */
-
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", "Segoe UI", sans-serif;
-}
+/* ===== CONO PAGE OVERRIDES (CINEMATIC PRODUCT STYLE) ===== */
 
 body {
-  background-color: #0a0a0a;
-  color: #eaeaea;
-  line-height: 1.7;
-  overflow-x: hidden;
+  background: radial-gradient(circle at top, #1f2937 0, #020617 55%);
+  color: #e5e7eb;
 }
 
-/* Header */
-.main-header {
-  text-align: center;
-  padding: 70px 20px;
-  background: linear-gradient(to right, #0a0a0a, #111);
-}
+/* ===== HERO SECTION ===== */
 
-.main-header h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  background: linear-gradient(90deg, #00f5ff, #9d4edd);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  letter-spacing: 2px;
-}
-
-/* Sections */
-.section {
+.cono-hero {
+  min-height: 90vh;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 80px 10%;
-  background: linear-gradient(to right, #0a0a0a 65%, transparent 100%);
+  padding: 5rem 0;
 }
 
-.section.reverse {
-  flex-direction: row-reverse; /* force reverse */
-  background: linear-gradient(to left, #0a0a0a 65%, transparent 100%);
+.cono-hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 3rem;
+  align-items: center;
 }
 
-/* Text Block */
-.text-block {
-  flex: 1;
-  padding: 20px;
+.cono-hero-text {
+  max-width: 520px;
 }
 
-.text-block h1 {
-  font-size: 2rem;
-  font-weight: 700;
-  background: linear-gradient(90deg, #00f5ff, #9d4edd);
+.cono-hero-text h1 {
+  font-size: 3.2rem;
+  margin-bottom: 0.6rem;
+  background: linear-gradient(to right, var(--accent-2), var(--accent));
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 20px;
+  color: transparent;
 }
 
-.text-block h3 {
-  font-size: 1.2rem;
-  color: #cccccc;
-  margin-bottom: 15px;
-  font-weight: 400;
-}
-
-.text-block p {
-  font-size: 1.1rem;
-  color: #d0d0d0;
-  max-width: 600px;
-}
-
-/* Image Block */
-.image-block {
-  flex: 1;
-  background-size: cover;
-  background-position: center;
-  min-height: 350px;
-  border-radius: 20px;
-  box-shadow: 0 0 25px rgba(0, 245, 255, 0.3);
-  transition: transform 0.5s ease, box-shadow 0.5s ease;
-}
-.image-block-cono {
-  flex: 1;
-  background-size: cover;
-  background-position: center;
-  min-height: 350px;
-  border-radius: 20px;
-  box-shadow: 0 0 25px rgba(0, 245, 255, 0.3);
-  transition: transform 0.5s ease, box-shadow 0.5s ease;
-}
-
-.image-block:hover {
-  transform: scale(1.03);
-  box-shadow: 0 0 40px rgba(157, 78, 221, 0.5);
-}
-.image-block-cono:hover {
-  transform: scale(1.03);
-  box-shadow: 0 0 40px rgba(157, 78, 221, 0.5);
-}
-
-img {
-  width: 100%;
-  height: auto;
-  border-radius: 20px;
-}
-
-.img-cono {
-  width: 100%;
-  height: auto;
-  border-radius: 20px;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 30px 20px;
-  background: #0a0a0a;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-footer h2 {
+.cono-tagline {
+  color: var(--accent-2);
+  margin-bottom: 1rem;
   font-size: 1rem;
-  font-weight: 400;
-  letter-spacing: 1px;
-  background: linear-gradient(90deg, #00f5ff, #9d4edd);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
-/* Responsive */
-@media (max-width: 900px) {
-  .section {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .section.reverse {
-    flex-direction: column;
-  }
-
-  .image-block {
-    width: 100%;
-    margin-top: 20px;
-  }
-}
-.image-block {
-  width: 100%;      /* or fixed size if you want */
-  height: 300px;    /* adjust height as per your layout */
-  overflow: hidden; /* hides anything outside */
+.cono-hero-text p {
+  line-height: 1.7;
+  margin-bottom: 0.6rem;
+  color: var(--text-muted);
 }
 
-.image-block .team-image {
+/* Image size control */
+.cono-hero-image img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;   /* ensures the image covers div */
-  object-position: center; /* keeps focus at center */
+  max-width: 360px;
+  height: auto;
+  margin: 0 auto;
   display: block;
+  filter: drop-shadow(0 30px 60px rgba(56, 189, 248, 0.45));
 }
 
+/* ===== STORY SECTION ===== */
+
+.cono-story-section {
+  padding: 6rem 0;
+}
+
+.cono-story-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.cono-story-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.cono-story-grid > div:first-child {
+  max-width: 520px;
+}
+
+.cono-story-section p {
+  line-height: 1.7;
+  color: var(--text-muted);
+}
+
+.cono-story-section img {
+  width: 100%;
+  max-width: 360px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  filter: drop-shadow(0 25px 50px rgba(56, 189, 248, 0.35));
+}
+
+/* ===== FEATURE STRIP ===== */
+
+.cono-features {
+  padding: 4rem 0;
+  background: linear-gradient(
+    to right,
+    rgba(34, 211, 238, 0.08),
+    rgba(124, 58, 237, 0.12)
+  );
+}
+
+.cono-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+}
+
+.cono-feature {
+  padding: 1rem;
+  border-left: 3px solid var(--accent-2);
+  background: rgba(2, 6, 23, 0.8);
+  text-align: center;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 70px;
+}
+
+/* ===== ACHIEVEMENT SECTION ===== */
+
+.cono-achievement {
+  text-align: center;
+  padding: 6rem 1rem;
+}
+
+.cono-achievement h2 {
+  font-size: 2.5rem;
+  color: var(--accent-2);
+}
+
+.teamimg {
+  width: 100%;
+  max-width: 460px;
+  max-height: 1200px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  filter: drop-shadow(0 25px 50px rgba(56, 189, 248, 0.35));
+}
+
+.cono-achievement p {
+  max-width: 600px;
+  margin: 0.8rem auto 0;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+/* ===== CONTRIBUTION SECTION ===== */
+
+.cono-contribution {
+  padding: 5rem 0;
+}
+
+.cono-contribution ul {
+    display: flex;
+    justify-content: center;
+}
+.cono-contribution h2 {
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.cono-contribution ul {
+  list-style: none;
+  max-width: 700px;
+  margin: auto;
+  padding: 0;
+}
+
+.cono-contribution li {
+  padding-left: 1.2rem;
+  border-left: 3px solid var(--accent);
+  margin-bottom: 1.2rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 900px) {
+
+  .cono-hero-grid,
+  .cono-story-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2.5rem;
+  }
+
+  .cono-hero-text,
+  .cono-story-grid > div:first-child {
+    margin: 0 auto;
+  }
+
+  .cono-feature-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .cono-hero-text h1 {
+    font-size: 2.4rem;
+  }
+
+  .cono-hero-image img,
+  .cono-story-section img {
+    max-width: 260px;
+  }
+}

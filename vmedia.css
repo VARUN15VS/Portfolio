@@ -139,3 +139,146 @@ footer {
   object-fit: cover;      /* fills area without distortion */
   border-radius: 12px;
 }
+
+/* ================================
+   ✅ RESPONSIVE DESIGN SYSTEM
+   FOR MOBILE • TABLET • LAPTOP
+   ================================ */
+
+/* ----------- Large Screens (1440px+) ----------- */
+@media (min-width: 1440px) {
+    .hero {
+        padding: 5rem 10rem;
+    }
+
+    section {
+        padding: 5rem 10rem;
+    }
+
+    .hero-text h2 {
+        font-size: 3rem;
+    }
+
+    .hero-text p {
+        font-size: 1.3rem;
+    }
+}
+
+/* ----------- Tablets & Small Laptops (max 1024px) ----------- */
+@media (max-width: 1024px) {
+
+    .navbar {
+        padding: 1rem 2rem;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 3rem 2.5rem;
+        min-height: auto;
+    }
+
+    .hero-text {
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+
+    .features .feature-list {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .feature-card {
+        flex: 1 1 45%;
+    }
+
+    section {
+        padding: 3.5rem 2.5rem;
+    }
+
+    .screenshots .screenshot-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ----------- Mobile (max 600px) ----------- */
+@media (max-width: 600px) {
+
+    /* Navbar */
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-top: 0.5rem;
+    }
+
+    .navbar li {
+        margin: 0.5rem 10px;
+    }
+
+    /* Hero */
+    .hero {
+        padding: 3rem 1.2rem;
+    }
+
+    .hero-text h2 {
+        font-size: 2rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    /* Sections */
+    section {
+        padding: 3rem 1.2rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    /* Features */
+    .features .feature-list {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    /* Screenshots */
+    .screenshots .screenshot-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Footer */
+    footer {
+        font-size: 0.8rem;
+        padding: 1.2rem;
+    }
+}
+
+/* ----------- Ultra Small Phones (max 360px) ----------- */
+@media (max-width: 360px) {
+
+    .hero-text h2 {
+        font-size: 1.7rem;
+    }
+
+    .hero-text p {
+        font-size: 0.95rem;
+    }
+
+    .btn {
+        font-size: 0.85rem;
+    }
+}

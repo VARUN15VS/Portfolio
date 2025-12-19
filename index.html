@@ -2,462 +2,588 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Portfolio.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <title>Varun_Saini</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO -->
+    <title>Varun Saini | AI Engineer & Data Science Portfolio</title>
+    <meta name="description"
+        content="Portfolio of Varun Saini – AI Engineer, Data Science enthusiast and CSE (AI & DS) student. Builder of CONO-AI, V-Media Player, DB-Saver and winner of Smart India Hackathon & Microsoft Campus Connect." />
+    <meta name="keywords"
+        content="Varun Saini, AI Engineer, Data Science, Machine Learning, Python Developer, CONO-AI, V-Media Player, DB-Saver, Smart India Hackathon Winner, JP Morgan Code for Good, Microsoft Campus Connect" />
+
+    <!-- Icons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="Portfolio.css" />
 </head>
 
 <body>
-    <div class="main">
-        <div class="nav">
-            <div class="navname">
-                <h3 id="nameinnav">VARUN SAINI</h3>
+    <!-- ========== NAVBAR ========== -->
+    <header class="header">
+        <div class="container nav-container">
+            <div class="logo">
+                <span class="logo-mark">VS</span>
+                <span class="logo-text">Varun Saini</span>
             </div>
-            <div class="navbuttons">
-                <a href="index.html"><button class="home">Home</button></a>
-                <button onclick="scrollToSection('aboutmesection')">About Me</button>
-                <button onclick="scrollToSection('myskillsection')">My Skills</button>
-                <button onclick="scrollToSection('myprojectsection')">Projects</button>
-                <button onclick="scrollToSection('myjourneysection')">My Journey</button>
-                <button onclick="scrollToSection('contactsection')">Contact</button>
-            </div>
-        </div>
 
-        <!--Introduction Section-->
-        <div class="intro1">
-            <div class="intropara1">
-                <h2>Hi it's <span>Varun</span></h2>
-                <h3>I'm a <span>Software Developer, AI Enthusiast and Problem Solver</span></h3>
-                <div class="buttonintro1">
-                    <div class="introbutton1">
-                        <button class="hire1" onclick="scrollToSection('aboutmesection')">About Me</button>
-                        <button class="contact1" onclick="scrollToSection('contactsection')">Contact</button>
-                    </div>
-                </div>
-            </div>
-            <div class="photo">
-                <img src="v55.jpg" alt="VS">
-            </div>
-        </div>
-        <div class="firstlinks1">
-            <div class="sublinks1">
-                <div class="links1">
-                    <div><a href="https://www.linkedin.com/in/varun-saini-vs/" target="_blank" id="link"><i
-                                class='bx bxl-linkedin bx-md'></i></a></div>
-                    <div><a href="https://github.com/VARUN15VS" target="_blank" id="link"><i
-                                class='bx bxl-github bx-md'></i></a></div>
-                </div>
-            </div>
-        </div>
-    </div>
+            <nav class="nav">
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#opensource">Open Source</a></li>
+                    <li><a href="#journey">Journey</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
 
-    <!--About Me Section-->
-    <section id="aboutmesection"></section>
-    <div class="intro">
-        <div class="intropara">
-            <p id="firstintro">Hi, I'm Varun Saini — AI Enthusiast | Software Developer | Problem Solver</p>
-            <p>Welcome to my portfolio! I’m currently pursuing a B.Tech in Computer Science Engineering with a
-                specialization in Artificial Intelligence and Data Science from Galgotias University. With a deep
-                passion for building intelligent systems, I’ve led and developed several projects in AI, machine
-                learning, full-stack development, and voice assistant technologies.<br>
-                As the Head of AI & Software Development at Cono AI, I enjoy creating solutions that blend innovation
-                with usability — from AI-powered assistants to secure media players. I’m also a proud winner of the
-                Smart India Hackathon and have completed industry-certified internships from Google, and RapidmINER.<br>
-                This space is a glimpse into my journey — the projects I've built, the problems I've solved, and the
-                vision I carry forward. Let’s build the future together.</p>
-            <div class="links">
-                <div><a href="https://www.linkedin.com/in/varun-saini-vs/" target="_blank" id="link"><i
-                            class='bx bxl-linkedin bx-md'></i></a></div>
-                <div><a href="https://github.com/VARUN15VS" target="_blank" id="link"><i
-                            class='bx bxl-github bx-md'></i></a></div>
-            </div>
-        </div>
-    </div>
+                <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+                    Hire Me
+                </button>
 
-    <!--Skill Section-->
-    <section id="myskillsection"></section>
-    <div class="myskill">
-        <div class="skillheading">
-            <h3><u>My Skills</u></h3>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                    <i class='bx bx-menu'></i>
+                </button>
+            </nav>
         </div>
-        <div class="skills">
-            <div class="skillcard">
-                <div class="skillimg">
-                    <img src="c++.png" alt="CPP" class="skillimg">
-                </div>
-                <div>
-                    <p id="skillheading"><u>C++/CPP</u></p>
-                    <p id="skillsummary">Proficient in C++ with a strong grasp of Data Structures and Algorithms.
-                        Skilled in solving complex problems efficiently using C++, with hands-on experience in
-                        implementing various DSA concepts including trees, graphs, recursion, dynamic programming, and
-                        more.</p>
-                </div>
-            </div>
-            <div class="skillcard">
-                <div class="skillimg">
-                    <img src="python.png" alt="Python" class="skillimg">
-                </div>
-                <div>
-                    <p id="skillheading"><u>Python</u></p>
-                    <p id="skillsummary">Proficient in Python with strong command over syntax and logic building.
-                        Completed multiple projects like Cono-AI, V-Media Player, and DB Saver. Experienced in
-                        developing real-world applications using libraries, GUI frameworks, APIs, and handling data
-                        efficiently in Python.</p>
-                </div>
-            </div>
-            <div class="skillcard">
-                <div class="skillimg">
-                    <img src="Langchain.png" alt="Langchain" class="skillimg">
-                </div>
-                <div>
-                    <p id="skillheading"><u>LangChain</u></p>
-                    <p id="skillsummary">Experienced with LangChain for building AI-powered applications, including
-                        integration of language models and retrieval-based systems. Applied LangChain during JP Morgan
-                        Code for Good to develop efficient AI workflows.</p>
-                </div>
-            </div>
-            <div class="skillcard">
-                <div class="skillimg">
-                    <img src="flask.png" alt="Flask" class="skillimg">
-                </div>
-                <div>
-                    <p id="skillheading"><u>Flask</u></p>
-                    <p id="skillsummary">Proficient in Flask for developing scalable web applications and APIs. Applied
-                        Flask in multiple projects, including backend integration for Cono AI and other AI-driven tools.
+    </header>
+
+    <!-- ========== HERO / ABOUT ========== -->
+    <main>
+        <section id="about" class="hero">
+            <div class="container hero-grid">
+                <div class="hero-left">
+                    <p class="hero-kicker">AI Engineer • Data Science • Problem Solver</p>
+                    <h1 class="hero-title">
+                        Hi, I'm <span>Varun Saini</span><br />
+                        I build AI-powered & data-driven products.
+                    </h1>
+                    <p class="hero-text">
+                        I’m a Computer Science Engineering student specializing in
+                        <b>Artificial Intelligence & Data Science</b> at Galgotias University (2022–2026),
+                        focused on building scalable, real-world software — from
+                        <b>AI assistants</b> to <b>secure platforms</b> and <b>developer tools</b>.
                     </p>
-                </div>
-            </div>
-            <div class="skillcard">
-                <div class="skillimg">
-                    <img src="html&css.png" alt="HTML&CSS" class="skillimg">
-                </div>
-                <div>
-                    <p id="skillheading"><u>HTML & CSS</u></p>
-                    <p id="skillsummary">Strong foundation in HTML and CSS for creating responsive, user-friendly
-                        frontends. Implemented modern web designs and UI components in projects like Cono AI.</p>
-                </div>
-            </div>
-            <div class="skillcard">
-                <div class="skillimg">
-                    <img src="ollama.png" alt="ollama" class="skillimg">
-                </div>
-                <div>
-                    <p id="skillheading"><u>OLLAMA</u></p>
-                    <p id="skillsummary">Experienced in MySQL with strong command over queries, joins, and database
-                        design. Used extensively in projects like Cono-AI, V-Media Player, and DB Saver. Skilled in
-                        managing, optimizing, and integrating databases effectively for real-world applications and
-                        dynamic interfaces.</p>
-                </div>
-            </div>
-            <div class="skillcard">
-                <div class="skillimg">
-                    <img src="mysql.png" alt="MySQL" class="skillimg">
-                </div>
-                <div>
-                    <p id="skillheading"><u>MySQL</u></p>
-                    <p id="skillsummary">Experienced in MySQL with strong command over queries, joins, and database
-                        design. Used extensively in projects like Cono-AI, V-Media Player, and DB Saver. Skilled in
-                        managing, optimizing, and integrating databases effectively for real-world applications and
-                        dynamic interfaces.</p>
-                </div>
-            </div>
-            <div class="skillcard">
-                <div class="skillimg">
-                    <img src="docker.png" alt="Docker" class="skillimg">
-                </div>
-                <div>
-                    <p id="skillheading"><u>Docker</u></p>
-                    <p id="skillsummary">Proficient in Docker with solid experience in containerizing applications,
-                        managing images, and using Docker Compose. Skilled in creating isolated environments for
-                        development and deployment, ensuring consistency, scalability, and efficient resource
-                        utilization across various platforms and workflows.</p>
-                </div>
-            </div>
-            <div class="skillcard">
-                <div class="skillimg">
-                    <img src="git.png" alt="GIT" class="skillimg">
-                </div>
-                <div>
-                    <p id="skillheading"><u>GIT and GITHUB</u></p>
-                    <p id="skillsummary">Proficient in Git and GitHub with strong experience in version control,
-                        collaboration, and repository management. Skilled in branching, merging, handling pull requests,
-                        and contributing to open-source and private projects using efficient, organized, and
-                        team-friendly workflows.</p>
-                </div>
-            </div>
-            <div class="skillcard">
-                <div class="skillimg">
-                    <img src="tkinter.png" alt="tkinter" class="skillimg">
-                </div>
-                <div>
-                    <p id="skillheading"><u>Tkinter and CustomTkinter</u></p>
-                    <p id="skillsummary">Proficient in Tkinter and CustomTkinter with strong experience in designing
-                        responsive and modern Python GUIs. Skilled in creating user-friendly interfaces, integrating
-                        backend logic, and developing feature-rich desktop applications with enhanced visual appeal and
-                        functionality.</p>
-                </div>
-            </div>
-            <div class="skillcard" id="otherskills">
-                <div class="skillcardheading">
-                    <p id="skillheading"><u>Other Technologies</u></p>
-                </div>
-                <div class="otherskillcard">
-                    <div class="skillcard1">
-                        <div class="otherskillimg">
-                            <img src="pandas.png" alt="Pandas">
-                        </div>
-                        <div class="otherskillname">
-                            <p>Pandas</p>
-                        </div>
+                    
+                    <p class="hero-text">
+                        I lead <b>AI & Software Development at CONO-AI</b>, and have built
+                        <b>Bullion</b>, a strategy-driven multi-stock scanner for financial markets,
+                        along with <b>V-Media Player</b> and <b>DB-Saver</b>.
+                        My work is backed by national recognition through the
+                        <b>Smart India Hackathon</b>, <b>Microsoft Campus Connect</b>,
+                        <b>JP Morgan Code for Good 2025</b>, and <b>AI/ML internships</b>
+                        via Google and RapidMiner (AICTE).
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn primary">View Projects</a>
+                        <a href="https://www.linkedin.com/in/varun-saini-vs/" target="_blank" class="btn ghost">
+                            <i class='bx bxl-linkedin'></i>
+                            Connect on LinkedIn
+                        </a>
                     </div>
-                    <div class="skillcard1">
-                        <div class="otherskillimg">
-                            <img src="tensorflow.png" alt="TensorFlow">
-                        </div>
-                        <div class="otherskillname">
-                            <p>Tensorflow</p>
-                        </div>
+
+                    <div class="hero-tags">
+                        <span>Artificial Intelligence</span>
+                        <span>Data Structures & Algorithms</span>
+                        <span>Machine Learning</span>
+                        <span>Backend & Tools</span>
                     </div>
-                    <div class="skillcard1">
-                        <div class="otherskillimg">
-                            <img src="opencv.png" alt="OpenCV">
-                        </div>
-                        <div class="otherskillname">
-                            <p>OpenCV</p>
+                </div>
+
+                <div class="hero-right">
+                    <div class="hero-right">
+    
+                    <div class="hero-card">
+
+                        <div class="hero-profile-wrapper">
+        <img src="v55.jpg" alt="Varun Saini Profile Picture" class="hero-profile-pic" />
+</div>
+
+                        <p class="hero-role">CSE (AI & DS)</p>
+                        <p class="hero-univ">Backend Engineer · FinTech & Trading Systems</p>
+                        <ul class="hero-highlights">
+                            <li><i class='bx bx-check'></i> National AI Olympiad (NAIO) 2025 – Advanced Category (National Rank 136, State Rank 8)</li>
+                            <li><i class='bx bx-check'></i> Scratch Foundation by MIT Media Lab – Open Source Contributor</li>
+                            <li><i class='bx bx-check'></i> QuickFIX (C++) – Open Source Contribution to Financial Trading Engine</li>
+                            <li><i class='bx bx-check'></i> Smart India Hackathon – 1st in pre-qualifiers</li>
+                            <li><i class='bx bx-check'></i> Microsoft Campus Connect – Winner</li>
+                            <li><i class='bx bx-check'></i> JP Morgan Code for Good 2025 – Participant</li>
+                        </ul>
+                        <div class="hero-socials">
+                            <a href="https://github.com/VARUN15VS" target="_blank" aria-label="GitHub">
+                                <i class='bx bxl-github'></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/varun-saini-vs/" target="_blank" aria-label="LinkedIn">
+                                <i class='bx bxl-linkedin'></i>
+                            </a>
+                            <!-- Add resume link if you have -->
+                            <!-- <a href="resume.pdf" target="_blank" aria-label="Resume"><i class='bx bx-file'></i></a> -->
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
+
+        <!-- ========== SKILLS ========== -->
+        <section id="skills" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Skills & Tech Stack</h2>
+                    <p>Bringing together strong fundamentals, AI expertise and practical tooling.</p>
+                </div>
+
+                <div class="skills-grid">
+                    <!-- Core Skills -->
+                    <div class="skills-group">
+                        <h3>Core Programming & CS</h3>
+                        <div class="skills-tags">
+                            <span><img src="c++.png" alt="C++" />C++ / DSA</span>
+                            <span><img src="python.png" alt="Python" />Python</span>
+                            <span><img src="html.png" alt="HTML & CSS" />HTML & CSS</span>
+                            <span><img src="git.png" alt="Git" />Git & GitHub</span>
+                            <span><img src="tkinter.png" alt="Tkinter" />Tkinter & CustomTkinter</span>
+                        </div>
+                        <p class="skills-text">
+                            Strong foundation in <b>data structures & algorithms</b>, object-oriented programming,
+                            and building end-to-end desktop and web tools.
+                        </p>
+                    </div>
+
+                    <!-- AI & Backend -->
+                    <div class="skills-group">
+                        <h3>AI, Data & Backend</h3>
+                        <div class="skills-tags">
+                            <span><img src="ml.png" alt="Machine Learning" />Machine Learning</span>
+                            <span><img src="langchain.png" alt="LangChain" />LangChain</span>
+                            <span><img src="flask.png" alt="Flask" />Flask</span>
+                            <span><img src="mysql.png" alt="MySQL" />MySQL</span>
+                            <span><img src="docker.png" alt="Docker" />Docker</span>
+                            <span><img src="ollama.png" alt="Ollama" />Ollama</span>
+                        </div>
+                        <p class="skills-text">
+                            Experience building <b>LLM-based assistants</b>, REST APIs, backend services and
+                            <b>database-driven applications</b> with secure and privacy-first design.
+                        </p>
+                    </div>
+
+                    <!-- Tools & Libraries -->
+                    <div class="skills-group">
+                        <h3>Tools & Libraries</h3>
+                        <div class="skills-tags small">
+                            <span><img src="numpy.webp" alt="NumPy" />NumPy</span>
+                            <span><img src="pandas.png" alt="Pandas" />Pandas</span>
+                            <span><img src="tensorflow.png" alt="TensorFlow" />TensorFlow</span>
+                            <span><img src="opencv.png" alt="OpenCV" />OpenCV</span>
+                            <span><img src="vscode.png" alt="VS Code" />VS Code</span>
+                        </div>
+                        <p class="skills-text">
+                            Comfortable moving from <b>data exploration</b> to <b>prototyping models</b> and
+                            integrating them into production-ready tools and interfaces.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== PROJECTS ========== -->
+        <section id="projects" class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Featured Projects</h2>
+                    <p>Real, shipped projects that combine AI, UX and engineering.</p>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Bullion -->
+                     <article class="project-card">
+                        <div class="project-image">
+                            <img src="Bullion.png" alt="Bullion" />
+                        </div>
+                        <div class="project-content">
+                            <h3>Bullion - A Multi-Stock Scanner and Trading Assistant</h3>
+                            <p>
+                                Bullion is a <b>multi-stock trading strategy scanner</b> designed to analyze multiple stocks 
+                                simultaneously based on user-selected technical strategies. Users can create custom stock 
+                                lists, select a strategy such as <b>Shooting Star</b>, and run parallel analysis to identify 
+                                stocks that match the defined conditions.
+                            </p>
+                            <p>
+                                Built with a <b>strategy-driven and scalable architecture</b>, Bullion evaluates each stock and 
+                                returns <b>actionable trade levels</b>, including expected buy price, stop-loss, and target sell 
+                                price. The project demonstrates how <b>software engineering and automation</b> can be applied 
+                                to financial markets to reduce manual analysis and improve trading consistency.
+                            </p>
+                            <div class="project-meta">
+                                <span>Python</span>
+                                <span>Machine Learning</span>
+                                <span>Node.js</span>
+                            </div>
+                            <a href="bullion.html" target="_blank" class="project-link">
+                                Learn more <i class='bx bx-right-arrow-alt'></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- CONO-AI -->
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img src="cono.png" alt="CONO-AI" />
+                        </div>
+                        <div class="project-content">
+                            <h3>CONO-AI – Smart & Privacy-Focused Voice Assistant</h3>
+                            <p>
+                                CONO-AI is an intelligent voice assistant designed to make everyday computing smarter,
+                                faster and more private. As the <b>Head of AI & Software Development</b>, I helped shape
+                                CONO-AI into a multifunctional assistant that answers general queries and coding
+                                questions, opens apps like WhatsApp, plays media and manages tasks —
+                                <b>without storing user data</b>.
+                            </p>
+                            <p>
+                                Built with <b>Python, ML models and custom GUI</b>, it includes a marketplace and
+                                entertainment zone and runs locally for complete privacy. It’s not just a project, but
+                                a vision to bring human-like intelligence into everyday interactions.
+                            </p>
+                            <div class="project-meta">
+                                <span>Python</span>
+                                <span>LLMs / LangChain</span>
+                                <span>Desktop App</span>
+                            </div>
+                            <a href="cono.html" target="_blank" class="project-link">
+                                Learn more <i class='bx bx-right-arrow-alt'></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- V-Media Player -->
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img src="vplayer.png" alt="V-Media Player" />
+                        </div>
+                        <div class="project-content">
+                            <h3>V-Media Player – Cloud-Connected, Timestamp-Aware Player</h3>
+                            <p>
+                                V-Media Player is a secure media player supporting both local and online streaming,
+                                built using <b>Python (Tkinter, CustomTkinter) and VLC</b>. Each user gets
+                                <b>5GB of cloud storage</b> to stream content from a central server.
+                            </p>
+                            <p>
+                                Its standout feature is the <b>timestamp system</b> – users can mark, name and revisit
+                                their favourite scenes while watching any media. Timestamps are stored locally in JSON,
+                                giving users full control and privacy while creating a personal connection to their
+                                content.
+                            </p>
+                            <div class="project-meta">
+                                <span>Python</span>
+                                <span>VLC</span>
+                                <span>Cloud Streaming</span>
+                            </div>
+                            <a href="vmedia.html" target="_blank" class="project-link">
+                                Learn more <i class='bx bx-right-arrow-alt'></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- DB-Saver -->
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img src="dblogo.png" alt="DB-Saver" />
+                        </div>
+                        <div class="project-content">
+                            <h3>DB-Saver – Database Backup & Restore Application</h3>
+                            <p>
+                                DB-Saver is a <b>database backup and restore tool</b> built to make production database
+                                management safer and simpler. It supports automated backups, secure storage and
+                                seamless restoration flows to protect critical data.
+                            </p>
+                            <p>
+                                Developed with a focus on <b>reliability, security and ease of use</b>, it showcases my
+                                experience in systems design, tool building and working with real-world data workflows.
+                            </p>
+                            <div class="project-meta">
+                                <span>C++ / Python</span>
+                                <span>MySQL</span>
+                                <span>System Tools</span>
+                            </div>
+                            <a href="db.html" target="_blank" class="project-link">
+                                Learn more <i class='bx bx-right-arrow-alt'></i>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== Open Source Contributions ========== -->
+        <section id="opensource" class="section">
+  <div class="section-header">
+    <h2 class="section-title">Open Source Contributions</h2>
+    <p>Real world open source engineering experience.</p><br>
     </div>
+    <div class="opensource-grid">
 
-    <!--Projeccts Section-->
-    <section id="myprojectsection"></section>
-    <div class="projects">
-        <div class="projectmain">
-            <h3><u>My Projects</u></h3>
+      <!-- Scratch Foundation -->
+      <div class="project-card opensource-card">
+        <div class="project-content">
+          <h3>Scratch Foundation by MIT Media Lab</h3>
+
+          <p class="project-tags">
+            Docs · Open Source · GitHub
+          </p>
+
+          <p class="project-desc">
+            Contributed to scratch-blocks, the core visual programming library powering Scratch, used by millions of 
+            learners worldwide and developed by the Scratch Foundation (MIT Media Lab). Identified Windows-specific 
+            build failures related to legacy tooling and OS command-length limitations. Improved developer onboarding 
+            by adding clear build documentation, WSL-based workarounds, and references to known issues, enabling smoother 
+            cross-platform contributions. Worked within a production-scale open-source workflow involving CI checks, 
+            pull requests, and CLA compliance. This contribution strengthened platform reliability and reduced setup 
+            friction for new developers while providing hands-on experience with large-scale JavaScript codebases and 
+            developer tooling.
+          </p>
+
+          <a href="https://github.com/scratchfoundation/scratch-blocks/pull/3421"
+             target="_blank"
+             class="project-btn">
+            <button class="btn primary">See Contribution</button>
+          </a>
         </div>
-        <div class="allprojects">
-            <div class="projectdetails">
-                <div class="evenheading">
-                    <h4>CONO-AI: Smart and Privacy focused AI Assistant</h4>
-                </div>
-                <div class="evencontent">
-                    <div class="projectimg">
-                        <img src="cono.png" alt="CONO" id="pimg">
-                    </div>
-                    <div class="aboutproject">
-                        <p>Cono AI is an intelligent voice assistant crafted to make everyday computing smarter, faster,
-                            and more private. As the Head of AI & Software Development, I’ve helped shape Cono AI into a
-                            multifunctional assistant that not only answers general queries and coding questions but
-                            also supports real-world use cases like opening WhatsApp, playing media, and managing tasks
-                            — all without compromising user data.<br>
-                            What sets Cono AI apart is its commitment to user privacy. All actions are performed
-                            locally, with no data being stored on the server or user device. The assistant also features
-                            a built-in marketplace and entertainment zone, offering a personalized digital
-                            experience.<br>
-                            Built using Python, machine learning models, and custom GUI frameworks, Cono AI is a result
-                            of deep research, innovation, and a desire to make AI useful and accessible for everyone.
-                            It’s not just a project — it’s a vision to bring human-like intelligence into everyday
-                            interactions.</p>
-                        <div class="projectbutton">
-                            <a href="cono.html" target="_blank"><button class="gotocono">Learn More</button></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="projectdetails">
-                <div class="oddheading">
-                    <h4>V-Media Player: Advance and Unique feature-rich</h4>
-                </div>
-                <div class="oddcontent">
-                    <div class="aboutproject">
-                        <p>V-Media Player is a versatile and secure media player designed to support both local and
-                            online streaming, with a special focus on privacy and user personalization. Developed using
-                            Python (Tkinter, CustomTkinter) and VLC, this player offers a clean, intuitive interface and
-                            a seamless playback experience.<br>
-                            One of its standout features is the 5GB free cloud storage per user, allowing users to
-                            stream content directly from a central server. But what truly makes V-Media Player unique is
-                            its timestamp system — users can mark, name, and revisit their favorite scenes while
-                            watching any media. These timestamps are stored locally in a JSON file, ensuring full
-                            control and privacy.<br>
-                            From smooth video playback to intelligent scene tracking, the player is built to give users
-                            more than just entertainment — it offers a personal connection to the content they love.
-                            Whether you're watching a film or streaming educational videos, V-Media Player transforms
-                            your viewing experience with smart features that remember what you value most.</p>
-                        <div class="projectbuttonodd">
-                            <a href="vmedia.html" target="_blank"><button class="gotocono">Learn More</button></a>
-                        </div>
-                    </div>
-                    <div class="projectimg">
-                        <img src="vplayer.png" alt="V-Media Player" id="pimg">
-                    </div>
-                </div>
-            </div>
-            <div class="projectdetails">
-                <div class="evenheading">
-                    <h4>DB-Saver: Database BackUp and Restore Application</h4>
-                </div>
-                <div class="evencontent">
-                    <div class="projectimg">
-                        <img src="dblogo.png" alt="DB-Saver" id="pimg">
-                    </div>
-                    <div class="aboutproject">
-                        <p>DB Saver is a powerful cross-platform application designed to backup and restore databases
-                            seamlessly across devices. Built with portability and ease-of-use in mind, it supports more
-                            than six major database systems, including MySQL, SQLite, MongoDB, PostgreSQL, MariaDB,
-                            OracleDB, and SQL Server.<br>
-                            Whether you're migrating data to a new system, safeguarding against accidental loss, or
-                            syncing environments, DB Saver ensures fast, secure, and reliable database transfers. With a
-                            user-friendly GUI built using Python and CustomTkinter, even non-technical users can create
-                            backups and restore databases with just a few clicks.<br>
-                            What makes DB Saver stand out is its cross-device compatibility — backups can be transferred
-                            and restored on entirely different machines, regardless of operating system. It also offers
-                            smart detection of database types, auto-path suggestions, and error handling to minimize
-                            failure risks.<br>
-                            Designed for developers, DB admins, and enterprises alike, DB Saver is your go-to solution
-                            for smart database management in multi-environment setups.</p>
-                        <div class="projectbutton">
-                            <a href="db.html" target="_blank"><button class="gotocono">Learn More</button></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      </div>
+
+      <!-- QuickFix -->
+      <div class="project-card opensource-card">
+        <div class="project-content">
+          <h3>QuickFix (Open Source)</h3>
+
+          <p class="project-tags">
+            C++ · Git · Open Source Collaboration
+          </p>
+
+          <p class="project-desc">
+            Worked with the QuickFIX C++ engine, a widely adopted open-source FIX protocol implementation used across trading 
+            systems and financial institutions. Built and analyzed the codebase on Linux/WSL, gaining hands-on exposure to 
+            financial messaging, session management, and persistent message stores. Investigated dictionary and configuration 
+            handling within the engine to improve correctness and robustness of FIX field processing. This contribution provided 
+            practical experience with production-grade C++ systems, low-latency financial infrastructure concepts, and real-world 
+            build pipelines commonly used in trading and market connectivity software.
+          </p>
+
+          <a href="https://github.com/quickfix/quickfix/pull/681"
+             target="_blank"
+             class="project-btn">
+            <button class="btn primary">See Contribution</button>
+          </a>
         </div>
+      </div>
+
     </div>
+</section>
 
+        <!-- ========== JOURNEY / TIMELINE ========== -->
+        <section id="journey" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>My Journey</h2>
+                    <p>A timeline of how I’ve grown as an AI and software engineer.</p>
+                </div>
 
-    <!-- Journey Section -->
-    <section id="myjourneysection"></section>
-    <div class="journey">
-        <h2 class="journey-title">My Journey</h2>
-        <div class="timeline">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>B.Tech CSE (AI & DS)</h3>
+                            <span class="time">2022 – 2026 · Galgotias University</span>
+                            <p>
+                                Pursuing Computer Science and Engineering with specialization in
+                                <b>Artificial Intelligence and Data Science</b>.
+                            </p>
+                        </div>
+                    </div>
 
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h3>B.Tech CSE (AI & DS)</h3>
-                    <span class="time">2022 – 2026 | Galgotias University</span>
-                    <p>Pursuing Computer Science and Engineering with specialization in Artificial Intelligence and Data
-                        Science.</p>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>Internships</h3>
+                            <span class="time">2024</span>
+                            <p>
+                                • Data Science Master Program – RapidMiner (AICTE)<br />
+                                • Google AI/ML Virtual Internship (AICTE)
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>Smart India Hackathon</h3>
+                            <span class="time">Sept 2024</span>
+                            <p>
+                                Led <b>Team Cono</b> as AI & Software Developer and achieved
+                                <b>1st position</b> among 300+ teams in pre-qualifiers.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>Major Projects</h3>
+                            <span class="time">2024 – 2025</span>
+                            <p>
+                                • CONO-AI: Smart & Secure Voice Assistant<br />
+                                • DB-Saver: Backup & Restore App<br />
+                                • V-Media Player: Advanced Media Player
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>Bullion : Major Fintech Project</h3>
+                            <span class="time">January 2025</span>
+                            <p>
+                                Software can scan multiple stocks in parallel and can apply strategy on them in parallel and can 
+                                predict buy, stop-loss and target levels.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>Microsoft Campus Connect</h3>
+                            <span class="time">May 2025</span>
+                            <p>Winner of <b>Microsoft Campus Connect</b> competition.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>JP Morgan Code for Good (CFG) 2025</h3>
+                            <span class="time">June 2025</span>
+                            <p>
+                                Participated in <b>JP Morgan Code for Good</b>, collaborating on impact-driven
+                                engineering solutions.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>National AI Olympiad (NAIO) 2025 : Advanced Category</h3>
+                            <h4>Accenture LearnVantage & TalentSprint</h4>
+                            <span class="time">October 2025</span>
+                            <p>
+                                Secured National Rank 136 and State Rank 8 in the Advanced category of a 
+                                nationwide AI competition, highlighting strong foundations in artificial intelligence, 
+                                analytics, and problem-solving.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>Scratch Foundation by MIT Media Lab — Open Source Contribution</h3>
+                            <span class="time">December 2025</span>
+                            <p>
+                                Contributed to scratch-blocks, resolving Windows build issues and improving documentation. Worked 
+                                within large-scale JavaScript codebases and production open-source workflows used by millions 
+                                worldwide.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>QuickFIX (C++) — Open Source Contribution</h3>
+                            <span class="time">December 2025</span>
+                            <p>
+                                Contributed to the QuickFIX C++ engine, gaining hands-on experience with FIX protocol messaging, 
+                                session management, and production-grade financial trading infrastructure on Linux/WSL.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h3>Internships</h3>
-                    <span class="time">2024</span>
+        <!-- ========== CONTACT ========== -->
+        <section id="contact" class="section section-alt">
+            <div class="container contact-grid">
+                <div class="contact-left">
+                    <h2>Let’s Build Something Impactful</h2>
                     <p>
-                        - Data Science Master Program – RapidMiner (AICTE)<br>
-                        - Google AI/ML Virtual Internship (AICTE)
+                        I’m actively looking for roles in <b>Software Engineering, AI/ML, and Data Science</b>.
+                        If you’re hiring or looking to collaborate on an impactful project, I’d love to talk.
                     </p>
+
+                    <div class="contact-details">
+                        <div>
+                            <h4>Email</h4>
+                            <p><a href="mailto:varun15ssrs@gmail.com">varun15ssrs@gmail.com</a></p>
+                        </div>
+                        <div>
+                            <h4>Profiles</h4>
+                            <div class="links">
+                                <a href="https://www.linkedin.com/in/varun-saini-vs/" target="_blank" id="link">
+                                    <i class='bx bxl-linkedin bx-md'></i>
+                                </a>
+                                <a href="https://github.com/VARUN15VS" target="_blank" id="link">
+                                    <i class='bx bxl-github bx-md'></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-right">
+                    <!-- Keep your Formspree endpoint -->
+                    <form action="https://formspree.io/f/xyzpqbwv" method="POST" class="contact-form">
+                        <div class="form-row">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your name" required />
+                        </div>
+                        <div class="form-row">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="you@example.com" required />
+                        </div>
+                        <div class="form-row">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="4"
+                                placeholder="Tell me about the role, project, or idea..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn primary full-width">Send Message</button>
+                    </form>
                 </div>
             </div>
+        </section>
+    </main>
 
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h3>Smart India Hackathon</h3>
-                    <span class="time">Sept 2024</span>
-                    <p>Led <b>Team Cono</b> as AI & Software Developer. Achieved <b>1st position</b> among 300+ teams in
-                        pre-qualifiers.</p>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h3>Certifications</h3>
-                    <span class="time">2023 – 2024</span>
-                    <p>
-                        - IBM SkillBuilds AI Fundamentals (Dec 2023)<br>
-                        - Oracle Database Programming with SQL (Jan 2023)
-                    </p>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h3>Major Projects</h3>
-                    <span class="time">2024 – 2025</span>
-                    <p>
-                        - CONO AI: Smart & Secure Voice Assistant<br>
-                        - DB Saver: Backup & Restore App<br>
-                        - V-Media Player: Advanced Media Player
-                    </p>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h3>Microsoft Campus Connect</h3>
-                    <span class="time">May 2025</span>
-                    <p>Winner of Microsoft Campus Connect competition.</p>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h3>JP Morgan Code for Good (CFG) 2025</h3>
-                    <span class="time">June 2025</span>
-                    <p>Participated in JP Morgan Code for Good.</p>
-                </div>
-            </div>
-
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <p>© <span id="year"></span> Varun Saini. All rights reserved.</p>
+            <p class="footer-small">Built with ❤️ using HTML, CSS, and a lot of debugging.</p>
         </div>
-    </div>
+    </footer>
 
-    <!--Contact Form-->
-    <section id="contactsection"></section>
-    <div class="contact">
-        <div class="contactleft">
-            <div class="talk">
-                <h3>Let's Talk</h3>
-                <p>I'm always open to exciting opportunities or just a good tech convo. Drop a message below!</p>
-                <p>Whether it’s a project, a job, or a quick hello—feel free to reach out!</p>
-            </div>
-            <div class="emailcontact">
-                <h3>Email</h3>
-                <p>varun15ssrs@gmail.com</p>
-            </div>
-            <div class="othercontact">
-                <h3>Check Out!</h3>
-                <div class="links">
-                    <div><a href="https://www.linkedin.com/in/varun-saini-vs/" target="_blank" id="link"><i
-                                class='bx bxl-linkedin bx-md'></i></a></div>
-                    <div><a href="https://github.com/VARUN15VS" target="_blank" id="link"><i
-                                class='bx bxl-github bx-md'></i></a></div>
-                </div>
-            </div>
-        </div>
-        <div class="contactright">
-            <form action="https://formspree.io/f/xyzpqbwv" method="POST">
-                <h3>Name</h3>
-                <input type="text" name="name" class="input-line" placeholder="Your Name" required>
-                <h3>Email</h3>
-                <input type="email" name="email" class="input-line" placeholder="Your Email" required>
-                <h3>Type your message here</h3>
-                <textarea name="message" class="input-line" placeholder="Your Message" row="10" required></textarea>
-                <button class="gotocono" onclick="submit">Submit</button>
-            </form>
-        </div>
-    </div>
-    </div>
-
+    <!-- ========== JS (NAV & YEAR) ========== -->
     <script>
-        function scrollToSection(sectionId) {
-            document.getElementById(sectionId).scrollIntoView({
-                behavior: "smooth"
-            });
-        }
-    </script>
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.querySelector('.nav-links');
 
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+        });
+
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 
 </html>
