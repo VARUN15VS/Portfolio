@@ -3,113 +3,287 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Bullion | Strategy-Driven Stock Intelligence</title>
+  <title>Bullion — Strategy-Driven Stock Intelligence</title>
+  <meta name="description" content="Bullion scans multiple stocks in parallel using rule-based trading strategies and delivers precise buy, stop-loss, and target levels." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="bullion.css" />
 </head>
 <body>
 
+<!-- TICKER TAPE -->
+<div class="ticker-wrap" aria-hidden="true">
+  <div class="ticker-track">
+    <span class="tick up">RELIANCE <em>+1.24%</em></span>
+    <span class="tick dn">HDFC <em>−0.87%</em></span>
+    <span class="tick up">TCS <em>+0.63%</em></span>
+    <span class="tick up">INFY <em>+2.11%</em></span>
+    <span class="tick dn">ICICIBANK <em>−0.44%</em></span>
+    <span class="tick up">BAJFINANCE <em>+1.90%</em></span>
+    <span class="tick dn">WIPRO <em>−1.02%</em></span>
+    <span class="tick up">NIFTY50 <em>+0.78%</em></span>
+    <span class="tick up">SBIN <em>+0.55%</em></span>
+    <span class="tick dn">MARUTI <em>−0.30%</em></span>
+    <span class="tick up">RELIANCE <em>+1.24%</em></span>
+    <span class="tick dn">HDFC <em>−0.87%</em></span>
+    <span class="tick up">TCS <em>+0.63%</em></span>
+    <span class="tick up">INFY <em>+2.11%</em></span>
+    <span class="tick dn">ICICIBANK <em>−0.44%</em></span>
+    <span class="tick up">BAJFINANCE <em>+1.90%</em></span>
+    <span class="tick dn">WIPRO <em>−1.02%</em></span>
+    <span class="tick up">NIFTY50 <em>+0.78%</em></span>
+  </div>
+</div>
+
 <!-- NAVBAR -->
-<header class="navbar">
-  <div class="container nav-inner">
-    <div class="logo">
-      <img src="assets/Bullion.png" alt="Bullion Logo">
+<header class="navbar" id="navbar">
+  <div class="nav-inner">
+    <div class="nav-logo">
+      <img src="assets/Bullion.png" alt="Bullion" class="nav-logo-img" />
       <span>BULLION</span>
     </div>
-    <nav>
+    <nav class="nav-links">
       <a href="#about">About</a>
+      <a href="#how">How it works</a>
       <a href="#features">Features</a>
       <a href="#demo">Demo</a>
       <a href="#contact">Contact</a>
     </nav>
+    <a href="#contact" class="nav-cta">Get in Touch</a>
+    <button class="nav-toggle" id="navToggle">☰</button>
+  </div>
+  <div class="nav-mobile" id="navMobile">
+    <a href="#about">About</a>
+    <a href="#how">How it works</a>
+    <a href="#features">Features</a>
+    <a href="#demo">Demo</a>
+    <a href="#contact">Contact</a>
   </div>
 </header>
 
 <!-- HERO -->
-<section class="hero">
-  <div class="container hero-grid">
-    <div class="hero-text">
-      <h1>Strategy-Driven<br>Stock Intelligence</h1>
-      <p>
-        Bullion scans multiple stocks in parallel using rule-based trading
-        strategies and delivers precise <b>buy, stop-loss, and target levels</b>.
+<section class="hero" id="about">
+  <div class="hero-bg-grid"></div>
+
+  <div class="container hero-inner">
+
+    <div class="hero-copy">
+      <div class="hero-eyebrow">
+        <span class="dot-live"></span>
+        Parallel · Strategy-Driven · Actionable
+      </div>
+
+      <h1 class="hero-h1">
+        Stop scanning<br />
+        charts <span class="gold-text">one by one.</span>
+      </h1>
+
+      <p class="hero-sub">
+        Bullion analyzes your entire watchlist simultaneously against technical
+        strategies — and surfaces only the stocks that match, complete with
+        precise <strong>buy, stop-loss, and target levels.</strong>
       </p>
-      <button class="cta">Explore Platform</button>
+
+      <div class="hero-stats">
+        <div class="hstat">
+          <span class="hstat-num" id="scanCount">0</span>
+          <span class="hstat-label">Stocks scanned / run</span>
+        </div>
+        <div class="hstat-div"></div>
+        <div class="hstat">
+          <span class="hstat-num">3</span>
+          <span class="hstat-label">Trade levels per signal</span>
+        </div>
+        <div class="hstat-div"></div>
+        <div class="hstat">
+          <span class="hstat-num">∞</span>
+          <span class="hstat-label">Custom watchlists</span>
+        </div>
+      </div>
+
+      <div class="hero-actions">
+        <a href="#demo" class="btn-gold">Watch Demo</a>
+        <a href="#features" class="btn-outline">See Features</a>
+      </div>
     </div>
 
-    <div class="hero-media">
-      <video src="assets/Timeline 2.mp4" autoplay muted loop playsinline></video>
+    <!-- Animated Chart Terminal -->
+    <div class="hero-terminal" id="heroTerminal">
+      <div class="terminal-bar">
+        <div class="terminal-dots">
+          <span></span><span></span><span></span>
+        </div>
+        <span class="terminal-label">bullion — strategy scanner</span>
+        <span class="terminal-status" id="termStatus">● SCANNING</span>
+      </div>
+      <div class="terminal-sub-bar">
+        <span class="tsb-item">RELIANCE · NSE · 1D</span>
+        <span class="tsb-item">STRATEGY: Shooting Star</span>
+      </div>
+
+      <div class="chart-area">
+        <div class="chart-canvas" id="chartCanvas"></div>
+        <div class="chart-signal-overlay" id="signalOverlay" style="display:none">
+          <div class="signal-badge">⚡ SIGNAL DETECTED</div>
+          <div class="signal-strat">Shooting Star · Bearish Reversal</div>
+        </div>
+      </div>
+
+      <div class="trade-levels" id="tradeLevels" style="opacity:0;transition:opacity 0.6s">
+        <div class="tl-row buy">
+          <span class="tl-label">BUY</span>
+          <span class="tl-value" id="tlBuy">—</span>
+          <span class="tl-tag">Entry</span>
+        </div>
+        <div class="tl-row sl">
+          <span class="tl-label">SL</span>
+          <span class="tl-value" id="tlSL">—</span>
+          <span class="tl-tag">Stop Loss</span>
+        </div>
+        <div class="tl-row tgt">
+          <span class="tl-label">TGT</span>
+          <span class="tl-value" id="tlTgt">—</span>
+          <span class="tl-tag">Target</span>
+        </div>
+      </div>
+
+      <div class="scan-log" id="scanLog"></div>
     </div>
+
   </div>
 </section>
 
-<!-- ABOUT -->
-<section id="about" class="section">
-  <div class="container narrow">
-    <h2>About Bullion</h2>
-    <p>
-      Bullion is a multi-stock strategy scanner designed to eliminate manual
-      chart analysis. Users create custom stock lists, select technical
-      strategies such as Shooting Star, and run parallel scans to identify
-      valid trade setups.
-    </p>
+<!-- HOW IT WORKS -->
+<section class="section how-section" id="how">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="sec-eyebrow">Process</span>
+      <h2 class="sec-title">From watchlist to trade in seconds</h2>
+      <p class="sec-sub">Three steps. No manual chart reading.</p>
+    </div>
+
+    <div class="how-steps">
+      <div class="how-step reveal">
+        <div class="step-num">01</div>
+        <div class="step-body">
+          <h3>Build your watchlist</h3>
+          <p>Add any NSE/BSE stocks to a named list. Save and reuse across sessions — no re-entering every time.</p>
+        </div>
+      </div>
+      <div class="how-arrow reveal">→</div>
+      <div class="how-step reveal">
+        <div class="step-num">02</div>
+        <div class="step-body">
+          <h3>Select a strategy</h3>
+          <p>Choose from built-in technical strategies like Shooting Star. Bullion knows exactly what pattern to look for.</p>
+        </div>
+      </div>
+      <div class="how-arrow reveal">→</div>
+      <div class="how-step reveal">
+        <div class="step-num">03</div>
+        <div class="step-body">
+          <h3>Scan & act</h3>
+          <p>All stocks are scanned in parallel. Every match returns a buy price, stop-loss, and target — ready to trade.</p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- FEATURES -->
-<section id="features" class="section alt">
+<section class="section feat-section" id="features">
   <div class="container">
-    <h2>Core Capabilities</h2>
+    <div class="sec-head reveal">
+      <span class="sec-eyebrow">Capabilities</span>
+      <h2 class="sec-title">Built for traders who value precision</h2>
+    </div>
 
-    <div class="feature-grid">
-      <div class="feature-card">
-        <h3>Parallel Stock Scanning</h3>
-        <p>Analyze multiple stocks simultaneously instead of one chart at a time.</p>
+    <div class="feat-grid">
+      <div class="feat-card reveal">
+        <div class="feat-icon">⚡</div>
+        <h3>Parallel scanning</h3>
+        <p>Every stock in your watchlist analyzed simultaneously — not sequentially. What takes an hour manually takes seconds.</p>
+        <div class="feat-stat"><span class="mono">×N</span> faster than manual</div>
       </div>
-
-      <div class="feature-card">
-        <h3>Strategy-Based Filtering</h3>
-        <p>Apply predefined trading strategies to detect valid market patterns.</p>
+      <div class="feat-card reveal">
+        <div class="feat-icon">🎯</div>
+        <h3>Strategy engine</h3>
+        <p>Rule-based strategies with strict condition matching — Shooting Star and more — each with precise entry logic baked in.</p>
+        <div class="feat-stat"><span class="mono">0</span> ambiguity</div>
       </div>
-
-      <div class="feature-card">
-        <h3>Buy / SL / Target Levels</h3>
-        <p>Automatically calculate actionable trade levels for eligible stocks.</p>
+      <div class="feat-card reveal">
+        <div class="feat-icon">📐</div>
+        <h3>Trade level calculator</h3>
+        <p>Every detected signal automatically computes buy price, stop-loss, and target. No manual calculation needed.</p>
+        <div class="feat-stat"><span class="mono">3</span> levels per signal</div>
       </div>
-
-      <div class="feature-card">
-        <h3>Custom Stock Lists</h3>
-        <p>Create and reuse personalized stock watchlists for faster analysis.</p>
+      <div class="feat-card reveal">
+        <div class="feat-icon">📋</div>
+        <h3>Custom watchlists</h3>
+        <p>Create named stock groups — Large Cap, Midcap, F&amp;O — and run targeted strategies against each independently.</p>
+        <div class="feat-stat"><span class="mono">∞</span> lists</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- DEMO -->
-<section id="demo" class="section">
-  <div class="container center">
-    <h2>Platform Walkthrough</h2>
-    <p class="muted">A quick look at how Bullion scans, filters, and outputs results.</p>
+<!-- DEMO VIDEO -->
+<section class="section demo-section" id="demo">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="sec-eyebrow">Demo</span>
+      <h2 class="sec-title">See it scan</h2>
+      <p class="sec-sub">A full walkthrough — scanning, filtering, and delivering trade levels.</p>
+    </div>
 
-    <div class="video-frame">
-      <video src="assets/Timeline 2.mp4" controls></video>
+    <div class="video-wrap reveal">
+      <div class="video-chrome">
+        <div class="video-chrome-bar">
+          <span></span><span></span><span></span>
+          <span class="vcb-label">bullion · platform walkthrough</span>
+        </div>
+        <video src="assets/Timeline 2.mp4" controls class="demo-video" preload="none">
+          Your browser does not support video.
+        </video>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="section alt">
-  <div class="container center">
-    <h2>Get in Touch</h2>
-    <p class="muted">
-      Interested in the system architecture or strategy engine?
-    </p>
-    <a href="mailto:varun15ssrs@gmail.com" class="cta">Contact</a>
+<section class="section contact-section" id="contact">
+  <div class="container">
+    <div class="contact-box reveal">
+      <div class="contact-left">
+        <span class="sec-eyebrow">Contact</span>
+        <h2 class="sec-title">Interested in the engine?</h2>
+        <p>Curious about the strategy architecture, parallel scan implementation, or want to collaborate? I'd love to talk tech.</p>
+        <div class="contact-chips">
+          <span class="chip">Strategy Architecture</span>
+          <span class="chip">System Design</span>
+          <span class="chip">FinTech Engineering</span>
+        </div>
+      </div>
+      <div class="contact-right">
+        <a href="mailto:varun15ssrs@gmail.com" class="btn-gold big">varun15ssrs@gmail.com</a>
+        <a href="https://www.linkedin.com/in/varun-saini-vs/" target="_blank" class="btn-outline">LinkedIn ↗</a>
+        <a href="https://github.com/VARUN15VS" target="_blank" class="btn-outline">GitHub ↗</a>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- FOOTER -->
-<footer>
-  © 2025 Bullion | Designed & Developed by Varun Saini
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <img src="assets/Bullion.png" alt="Bullion" style="height:20px;opacity:0.55" />
+      <span>BULLION</span>
+    </div>
+    <p>© <span id="yr"></span> Bullion · Designed &amp; Developed by <a href="https://github.com/VARUN15VS" target="_blank">Varun Saini</a></p>
+    <div class="footer-note mono">Python · Node.js · ML</div>
+  </div>
 </footer>
 
 <script src="bullion.js"></script>
