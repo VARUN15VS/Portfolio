@@ -2,129 +2,354 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>CONO-AI | Varun Saini</title>
+  <title>CONO-AI | Privacy-First Voice Assistant — Varun Saini</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="description" content="CONO-AI is a smart and secure voice assistant built by Varun Saini with a focus on privacy-first AI, offline automation, and intelligent interactions.">
-  <link rel="stylesheet" href="Portfolio.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="cono.css">
 </head>
 <body>
 
-<!-- ===== NAVBAR (REUSED) ===== -->
-<header class="header">
-  <div class="container nav-container">
-    <div class="logo">
-      <span class="logo-mark">VS</span>
-      <span class="logo-text">Varun Saini</span>
-    </div>
-    <nav class="nav">
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="index.html#projects">Projects</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
-      </ul>
+<!-- ===== NAVBAR ===== -->
+<header class="c-header" id="cHeader">
+  <div class="c-container c-nav-inner">
+    <a href="index.html" class="c-logo">
+      <span class="c-logo-mark">VS</span>
+      <span class="c-logo-text">Varun Saini</span>
+    </a>
+    <nav class="c-nav-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#projects">Projects</a>
+      <a href="index.html#contact">Contact</a>
     </nav>
+    <a href="https://github.com/VARUN15VS" target="_blank" class="c-nav-cta">GitHub ↗</a>
   </div>
 </header>
 
-<!-- ===== CONO HERO ===== -->
-<section class="cono-hero">
-  <div class="container cono-hero-grid">
-    <div class="cono-hero-text">
-      <h1>CONO-AI</h1>
-      <p class="cono-tagline">A Smart & Secure AI Voice Assistant</p>
-      <p>
-        CONO-AI is an intelligent, privacy-first voice assistant that simplifies your digital life.
-        From answering queries to operating apps — everything happens locally, without storing your data.
+<!-- ===== HERO ===== -->
+<section class="c-hero">
+  <div class="c-hero-glow"></div>
+  <div class="c-container c-hero-grid">
+
+    <div class="c-hero-text">
+      <div class="c-privacy-badge">
+        <span class="c-priv-dot"></span>
+        100% Offline · Zero Cloud
+      </div>
+
+      <h1 class="c-h1">CONO<span class="c-dash">-</span>AI</h1>
+      <p class="c-tagline">A voice assistant that never phones home.</p>
+
+      <p class="c-hero-desc">
+        CONO-AI listens, understands, and acts — entirely on your device.
+        From answering queries to controlling apps, every operation runs
+        locally. <strong>Nothing you say is ever stored, uploaded, or seen.</strong>
       </p>
+
+      <div class="c-hero-actions">
+        <a href="#story" class="c-btn c-btn-primary">How it Works</a>
+        <a href="#achievement" class="c-btn c-btn-ghost">🏆 Hackathon Win</a>
+      </div>
     </div>
 
-    <div class="cono-hero-image">
-      <img src="assets/cono.png" alt="CONO AI">
+    <!-- Voice Console — signature element -->
+    <div class="c-console">
+      <div class="c-console-top">
+        <span class="c-console-status" id="cStatus">
+          <span class="c-status-dot"></span> LISTENING
+        </span>
+        <span class="c-console-mode mono">LOCAL · NO NETWORK</span>
+      </div>
+
+      <div class="c-wave" id="cWave"></div>
+
+      <div class="c-transcript">
+        <div class="c-transcript-line">
+          <span class="c-transcript-tag mono">YOU</span>
+          <span class="c-transcript-text" id="cUserLine">&nbsp;</span><span class="c-caret">|</span>
+        </div>
+        <div class="c-transcript-line c-transcript-reply" id="cReplyWrap" style="opacity:0">
+          <span class="c-transcript-tag mono c-tag-ai">CONO</span>
+          <span class="c-transcript-text" id="cReplyLine"></span>
+        </div>
+      </div>
+
+      <div class="c-console-foot mono">
+        <span>⚡ 0.2s response</span>
+        <span>🔒 no data leaves device</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== STORY ===== -->
+<section class="c-section" id="story">
+  <div class="c-container c-story-grid">
+    <div class="c-story-text">
+      <span class="c-eyebrow">Architecture</span>
+      <h2 class="c-h2">What makes CONO-AI different</h2>
+      <p>
+        Most assistants route your voice through someone else's server. CONO-AI
+        doesn't. Every layer — speech recognition, intent parsing, and execution —
+        runs locally on your machine.
+      </p>
+      <p>
+        Even sensitive operations like <strong>WhatsApp automation</strong> never
+        touch an external server. What you say, stays on your device — permanently.
+      </p>
+      <div class="c-compare">
+        <div class="c-compare-row c-compare-bad">
+          <span class="c-compare-icon">☁</span>
+          <span>Typical assistant: voice → cloud server → response</span>
+        </div>
+        <div class="c-compare-row c-compare-good">
+          <span class="c-compare-icon">⌁</span>
+          <span>CONO-AI: voice → local engine → response</span>
+        </div>
+      </div>
+    </div>
+    <div class="c-story-image">
+      <div class="c-img-frame">
+        <img src="assets/ui1.png" alt="CONO-AI interface">
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ===== STORY SECTION ===== -->
-<section class="cono-story-section">
-  <div class="container cono-story-grid">
-    <div>
-      <h2>What Makes CONO-AI Different?</h2>
-      <p>
-        Unlike traditional assistants, CONO-AI works in secure offline mode, ensuring that even sensitive
-        operations like WhatsApp control never touch an external server.
-      </p>
+<!-- ===== FEATURE STRIP ===== -->
+<section class="c-features">
+  <div class="c-container">
+    <div class="c-feat-head">
+      <span class="c-eyebrow">System Permissions</span>
+      <h2 class="c-h2">What CONO-AI can do — and what it never does</h2>
     </div>
-    <div>
-      <img src="assets/ui1.png" alt="CONO UI">
+    <div class="c-feat-grid">
+      <div class="c-feat-card">
+        <div class="c-feat-top">
+          <span class="c-feat-icon">🔒</span>
+          <span class="c-feat-status c-allow">ON-DEVICE</span>
+        </div>
+        <h3>Secure offline operations</h3>
+        <p>All processing happens locally — no internet dependency for core functions.</p>
+      </div>
+      <div class="c-feat-card">
+        <div class="c-feat-top">
+          <span class="c-feat-icon">⚡</span>
+          <span class="c-feat-status c-allow">INSTANT</span>
+        </div>
+        <h3>Instant query handling</h3>
+        <p>Natural language queries answered in real time, no network round-trip.</p>
+      </div>
+      <div class="c-feat-card">
+        <div class="c-feat-top">
+          <span class="c-feat-icon">🎬</span>
+          <span class="c-feat-status c-allow">LOCAL</span>
+        </div>
+        <h3>Entertainment hub</h3>
+        <p>Play media and manage entertainment directly through voice commands.</p>
+      </div>
+      <div class="c-feat-card">
+        <div class="c-feat-top">
+          <span class="c-feat-icon">🛒</span>
+          <span class="c-feat-status c-allow">INTEGRATED</span>
+        </div>
+        <h3>Integrated marketplace</h3>
+        <p>Browse and interact with a built-in marketplace layer, voice-first.</p>
+      </div>
+      <div class="c-feat-card">
+        <div class="c-feat-top">
+          <span class="c-feat-icon">🎙</span>
+          <span class="c-feat-status c-allow">SMART</span>
+        </div>
+        <h3>Smart voice automation</h3>
+        <p>Operate apps and trigger workflows hands-free, with contextual understanding.</p>
+      </div>
+      <div class="c-feat-card c-feat-deny">
+        <div class="c-feat-top">
+          <span class="c-feat-icon">🚫</span>
+          <span class="c-feat-status c-deny">NEVER</span>
+        </div>
+        <h3>Cloud data storage</h3>
+        <p>Your voice, queries, and activity are never uploaded, logged, or sold.</p>
+      </div>
     </div>
-  </div>
-</section>
-
-<!-- ===== FEATURE RIBBON ===== -->
-<section class="cono-features">
-  <div class="container cono-feature-grid">
-    <div class="cono-feature">Secure Offline Operations</div>
-    <div class="cono-feature">Instant Query Handling</div>
-    <div class="cono-feature">Entertainment Hub</div>
-    <div class="cono-feature">Integrated Marketplace</div>
-    <div class="cono-feature">Smart Voice Automation</div>
   </div>
 </section>
 
 <!-- ===== ACHIEVEMENT ===== -->
-<section class="cono-achievement">
-  <h2>🏆 Smart India Hackathon Winner</h2>
-  <img src="assets/teamcono.jpg" alt="Team CONO" class="teamimg">
-  <p>
-    As Head of Software & AI Development, I led Team CONO to secure 1st place among 300+ teams
-    at Smart India Hackathon 2025.
-  </p>
+<section class="c-achievement" id="achievement">
+  <div class="c-container c-achievement-inner">
+    <div class="c-trophy-glow"></div>
+    <span class="c-eyebrow c-eyebrow-center">Recognition</span>
+    <h2 class="c-h2-lg">🏆 Smart India Hackathon — 1st Place</h2>
+    <div class="c-team-frame">
+      <img src="assets/teamcono.jpg" alt="Team CONO" class="c-teamimg">
+    </div>
+    <p class="c-achievement-text">
+      As <strong>Head of Software &amp; AI Development</strong>, I led Team CONO to secure
+      1st place among 300+ teams at Smart India Hackathon — building CONO-AI from
+      concept to a working, judged product in a national pre-qualifier.
+    </p>
+  </div>
 </section>
 
 <!-- ===== CONTRIBUTION ===== -->
-<section class="cono-contribution">
-  <div class="container">
-    <h2>My Contribution</h2>
-    <ul>
-      <li>Built the core AI voice processing engine</li>
-      <li>Designed offline security & privacy module</li>
-      <li>Integrated marketplace & entertainment layer</li>
-      <li>Handled testing, optimization & deployment</li>
-    </ul>
+<section class="c-section c-contribution">
+  <div class="c-container">
+    <span class="c-eyebrow c-eyebrow-center">My Role</span>
+    <h2 class="c-h2 c-center">What I built</h2>
+    <div class="c-contrib-grid">
+      <div class="c-contrib-item">
+        <span class="c-contrib-num mono">01</span>
+        <p>Built the core AI voice processing engine</p>
+      </div>
+      <div class="c-contrib-item">
+        <span class="c-contrib-num mono">02</span>
+        <p>Designed the offline security &amp; privacy module</p>
+      </div>
+      <div class="c-contrib-item">
+        <span class="c-contrib-num mono">03</span>
+        <p>Integrated the marketplace &amp; entertainment layer</p>
+      </div>
+      <div class="c-contrib-item">
+        <span class="c-contrib-num mono">04</span>
+        <p>Handled testing, optimization &amp; deployment</p>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- ===== FOOTER ===== -->
-<footer class="footer">
-  <div class="container footer-inner">
+<footer class="c-footer">
+  <div class="c-container c-footer-inner">
     <p>© CONO-AI by Team Cono</p>
-    <p class="footer-small">Built by Varun Saini</p>
+    <p class="c-footer-small">Built by <a href="https://github.com/VARUN15VS" target="_blank">Varun Saini</a></p>
   </div>
 </footer>
 
-
-<!-- ========== ANIMATION SYSTEM ========== -->
 <script>
-const revealElements = document.querySelectorAll(".section, .project-card");
-
-revealElements.forEach(el => {
-  el.classList.add("reveal-base", "reveal-hidden");
-});
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.remove("reveal-hidden");
-      entry.target.classList.add("reveal-show");
-      observer.unobserve(entry.target);
-    }
+  window.addEventListener('scroll', () => {
+    document.getElementById('cHeader').classList.toggle('scrolled', window.scrollY > 10);
   });
-}, { threshold: 0.15 });
 
-revealElements.forEach(el => observer.observe(el));
+  const wave = document.getElementById('cWave');
+  const BAR_COUNT = 48;
+  const bars = [];
+  for (let i = 0; i < BAR_COUNT; i++) {
+    const bar = document.createElement('div');
+    bar.className = 'c-wave-bar';
+    wave.appendChild(bar);
+    bars.push(bar);
+  }
 
-document.getElementById("year").textContent = new Date().getFullYear();
+  let waveState = 'idle';
+  function animateWave() {
+    bars.forEach((bar, i) => {
+      let h;
+      if (waveState === 'idle') {
+        h = 4 + Math.sin(Date.now() / 600 + i) * 2 + 2;
+      } else if (waveState === 'listening') {
+        h = 6 + Math.random() * 26;
+      } else {
+        const mid = BAR_COUNT / 2;
+        const falloff = 1 - Math.abs(i - mid) / mid;
+        h = 8 + Math.random() * 30 * falloff;
+      }
+      bar.style.height = h + 'px';
+    });
+    requestAnimationFrame(animateWave);
+  }
+  animateWave();
+
+  const commands = [
+    { user: "Hey CONO, open WhatsApp and message Mom", reply: "Done — message sent locally, no data left your device." },
+    { user: "Play my focus playlist", reply: "Playing now from your local library." },
+    { user: "What's on my schedule today?", reply: "3 tasks pending. Your calendar stayed fully offline." },
+    { user: "Close all background apps", reply: "Closed 6 apps. System optimized." },
+  ];
+
+  const statusEl = document.getElementById('cStatus');
+  const userLineEl = document.getElementById('cUserLine');
+  const replyWrap = document.getElementById('cReplyWrap');
+  const replyLineEl = document.getElementById('cReplyLine');
+
+  function typeText(el, text, speed, callback) {
+    el.textContent = '';
+    let i = 0;
+    const interval = setInterval(() => {
+      el.textContent += text[i];
+      i++;
+      if (i >= text.length) {
+        clearInterval(interval);
+        if (callback) callback();
+      }
+    }, speed);
+  }
+
+  let cmdIndex = 0;
+  let cycleStarted = false;
+
+  function runCycle() {
+    const cmd = commands[cmdIndex % commands.length];
+    cmdIndex++;
+
+    waveState = 'listening';
+    statusEl.innerHTML = '<span class="c-status-dot"></span> LISTENING';
+    statusEl.classList.remove('c-status-think','c-status-speak');
+    replyWrap.style.opacity = '0';
+    replyLineEl.textContent = '';
+
+    typeText(userLineEl, cmd.user, 28, () => {
+      setTimeout(() => {
+        waveState = 'idle';
+        statusEl.innerHTML = '<span class="c-status-dot"></span> PROCESSING — LOCALLY';
+        statusEl.classList.add('c-status-think');
+
+        setTimeout(() => {
+          waveState = 'speaking';
+          statusEl.innerHTML = '<span class="c-status-dot"></span> RESPONDING';
+          statusEl.classList.remove('c-status-think');
+          statusEl.classList.add('c-status-speak');
+          replyWrap.style.opacity = '1';
+
+          typeText(replyLineEl, cmd.reply, 22, () => {
+            setTimeout(() => {
+              waveState = 'idle';
+              statusEl.innerHTML = '<span class="c-status-dot"></span> LISTENING';
+              statusEl.classList.remove('c-status-speak');
+              setTimeout(runCycle, 1800);
+            }, 1800);
+          });
+        }, 900);
+      }, 400);
+    });
+  }
+
+  const consoleObs = new IntersectionObserver(entries => {
+    if (entries[0].isIntersecting && !cycleStarted) {
+      cycleStarted = true;
+      setTimeout(runCycle, 500);
+      consoleObs.disconnect();
+    }
+  }, { threshold: 0.3 });
+  consoleObs.observe(document.querySelector('.c-console'));
+
+  const revealElements = document.querySelectorAll(".c-section, .c-features, .c-achievement, .c-story-grid, .c-feat-card, .c-contrib-item");
+  revealElements.forEach(el => el.classList.add("c-reveal"));
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("c-reveal-show");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  revealElements.forEach(el => observer.observe(el));
 </script>
 
 </body>

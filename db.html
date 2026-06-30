@@ -3,89 +3,229 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DB-Saver | Portfolio</title>
+    <title>DB-Saver | Multi-Database Backup & Restore</title>
+    <meta name="description" content="DB-Saver is a Python-based tool to back up and restore MySQL, SQLite, PostgreSQL, and MongoDB databases — reliable, scriptable, cross-platform.">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="db.css">
 </head>
 <body>
-    <!-- Header Section -->
-    <header class="navbar">
-        <div class="logo">
-            <img src="assets/dblogo.png" alt="DB-Saver Logo">
-            <h1>DB-Saver</h1>
+
+    <!-- ===== NAVBAR ===== -->
+    <header class="d-nav" id="dNav">
+        <div class="d-container d-nav-inner">
+            <div class="d-logo">
+                <img src="assets/dblogo.png" alt="DB-Saver Logo">
+                <span>DB-Saver</span>
+            </div>
+            <nav class="d-nav-links">
+                <a href="#about">About</a>
+                <a href="#engines">Engines</a>
+                <a href="#features">Features</a>
+                <a href="#screenshots">Screenshots</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <a href="#contact" class="d-nav-cta">Get in Touch</a>
+            <button class="d-nav-toggle" id="dNavToggle">☰</button>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#screenshots">Screenshots</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="d-nav-mobile" id="dNavMobile">
+            <a href="#about">About</a>
+            <a href="#engines">Engines</a>
+            <a href="#features">Features</a>
+            <a href="#screenshots">Screenshots</a>
+            <a href="#contact">Contact</a>
+        </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-text">
-            <h2>Secure & Simple Database Backup</h2>
-            <p>DB-Saver lets you back up and restore SQL & NoSQL databases with ease.</p>
-            <a href="#about" class="btn">Explore</a>
-        </div>
-        <div class="hero-img">
-            <img src="assets/dbsaver.png" alt="DB-Saver UI" class="ui-img">
-        </div>
-    </section>
+    <!-- ===== HERO ===== -->
+    <section class="d-hero">
+        <div class="d-hero-grid d-container">
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <h2>About DB-Saver</h2>
-        <p>
-            DB-Saver is a Python-based application designed to handle database 
-            backups and restores effortlessly. It supports multiple databases 
-            including <strong>MySQL, SQLite, PostgreSQL, MongoDB</strong>, and more.
-        </p>
-    </section>
+            <div class="d-hero-text">
+                <div class="d-eyebrow">
+                    <span class="d-eyebrow-dot"></span>
+                    Python · Cross-Platform · Open Source
+                </div>
 
-    <!-- Features Section -->
-    <section id="features" class="features">
-        <h2>Key Features</h2>
-        <div class="feature-list">
-            <div class="feature-card">
-                <h3>Multi-Database Support</h3>
-                <p>Works seamlessly with SQL (MySQL, PostgreSQL, SQLite) and NoSQL (MongoDB).</p>
-            </div>
-            <div class="feature-card">
-                <h3>Easy Backup & Restore</h3>
-                <p>Create backups with one click and restore them instantly when needed.</p>
-            </div>
-            <div class="feature-card">
-                <h3>Python Powered</h3>
-                <p>Built with Python ensuring reliability, speed, and cross-platform compatibility.</p>
-            </div>
-            <div class="feature-card">
-                <h3>Secure Storage</h3>
-                <p>Backups can be stored locally or uploaded to remote servers for safety.</p>
-            </div>
-        </div>
-    </section>
+                <h1>Backups that<br><span class="d-grad">just work.</span></h1>
 
-    <!-- Screenshots Section -->
-    <section id="screenshots" class="screenshots">
-        <h2>App Screenshots</h2>
-        <div class="screenshot-grid">
-            <img src="assets/dbsaver.png" alt="DB-Saver UI" class="ui-img">
+                <p class="d-hero-sub">
+                    DB-Saver backs up and restores <strong>MySQL, PostgreSQL, SQLite, and MongoDB</strong>
+                    databases in one click — compressed, verified, and stored exactly where you tell it to.
+                </p>
+
+                <div class="d-hero-actions">
+                    <a href="#about" class="d-btn d-btn-primary">Explore DB-Saver</a>
+                    <a href="#screenshots" class="d-btn d-btn-ghost">View Screenshots</a>
+                </div>
+
+                <div class="d-hero-meta mono">
+                    <span>✓ Local or remote storage</span>
+                    <span>✓ One-click restore</span>
+                </div>
+            </div>
+
+            <!-- Terminal — signature element -->
+            <div class="d-terminal" id="dTerminal">
+                <div class="d-term-bar">
+                    <div class="d-term-dots"><span></span><span></span><span></span></div>
+                    <span class="d-term-label mono">db-saver — backup engine</span>
+                </div>
+                <div class="d-term-body mono" id="dTermBody"></div>
+                <div class="d-term-footer">
+                    <div class="d-engine-pills" id="dEnginePills">
+                        <span class="d-pill active" data-engine="MySQL">MySQL</span>
+                        <span class="d-pill" data-engine="PostgreSQL">PostgreSQL</span>
+                        <span class="d-pill" data-engine="SQLite">SQLite</span>
+                        <span class="d-pill" data-engine="MongoDB">MongoDB</span>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <h2>Contact</h2>
-        <p>If you'd like to collaborate or learn more about DB-Saver, get in touch.</p>
-        <a href="mailto:varun15ssrs@gmail.com" class="btn">Get in Touch</a>
+    <!-- ===== ABOUT ===== -->
+    <section id="about" class="d-section">
+        <div class="d-container d-about-grid">
+            <div class="d-about-text">
+                <span class="d-sec-eyebrow">About</span>
+                <h2 class="d-sec-title">One tool. Every database you use.</h2>
+                <p>
+                    DB-Saver is a Python-based application built to remove the friction from database
+                    backups. Instead of memorizing <code class="mono">mysqldump</code> flags or writing
+                    one-off scripts per project, DB-Saver gives you a single, reliable interface for
+                    every engine you work with.
+                </p>
+                <p>
+                    It supports <strong>MySQL, SQLite, PostgreSQL, and MongoDB</strong> — covering both
+                    SQL and NoSQL workflows — with the same backup and restore experience across all of them.
+                </p>
+            </div>
+            <div class="d-about-stats">
+                <div class="d-stat-card">
+                    <span class="d-stat-num mono">4</span>
+                    <span class="d-stat-label">Database engines</span>
+                </div>
+                <div class="d-stat-card">
+                    <span class="d-stat-num mono">1-click</span>
+                    <span class="d-stat-label">Backup & restore</span>
+                </div>
+                <div class="d-stat-card">
+                    <span class="d-stat-num mono">100%</span>
+                    <span class="d-stat-label">Python-built</span>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 DB-Saver | Designed by Varun Saini</p>
+    <!-- ===== ENGINES ===== -->
+    <section id="engines" class="d-section d-section-alt">
+        <div class="d-container">
+            <div class="d-sec-head">
+                <span class="d-sec-eyebrow">Compatibility</span>
+                <h2 class="d-sec-title">Supported database engines</h2>
+                <p class="d-sec-sub">SQL and NoSQL, handled the same reliable way.</p>
+            </div>
+
+            <div class="d-engine-grid">
+                <div class="d-engine-card">
+                    <div class="d-engine-icon">🐬</div>
+                    <h3>MySQL</h3>
+                    <span class="d-engine-type">SQL</span>
+                    <p>Full dump and restore with structure, data, and indexes preserved.</p>
+                </div>
+                <div class="d-engine-card">
+                    <div class="d-engine-icon">🐘</div>
+                    <h3>PostgreSQL</h3>
+                    <span class="d-engine-type">SQL</span>
+                    <p>Native pg_dump-based backups with consistent restore behavior.</p>
+                </div>
+                <div class="d-engine-card">
+                    <div class="d-engine-icon">🪶</div>
+                    <h3>SQLite</h3>
+                    <span class="d-engine-type">SQL</span>
+                    <p>Lightweight file-based backup — ideal for local and embedded apps.</p>
+                </div>
+                <div class="d-engine-card">
+                    <div class="d-engine-icon">🍃</div>
+                    <h3>MongoDB</h3>
+                    <span class="d-engine-type">NoSQL</span>
+                    <p>Document-store backups using mongodump/mongorestore under the hood.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FEATURES ===== -->
+    <section id="features" class="d-section">
+        <div class="d-container">
+            <div class="d-sec-head">
+                <span class="d-sec-eyebrow">Capabilities</span>
+                <h2 class="d-sec-title">Built to be trusted with your data</h2>
+            </div>
+
+            <div class="d-feature-list">
+                <div class="d-feature-card">
+                    <div class="d-feature-num mono">01</div>
+                    <h3>Multi-database support</h3>
+                    <p>Works seamlessly with SQL (MySQL, PostgreSQL, SQLite) and NoSQL (MongoDB) — one consistent interface for every engine.</p>
+                </div>
+                <div class="d-feature-card">
+                    <div class="d-feature-num mono">02</div>
+                    <h3>Easy backup & restore</h3>
+                    <p>Create backups with one click and restore them instantly when needed — no manual command construction.</p>
+                </div>
+                <div class="d-feature-card">
+                    <div class="d-feature-num mono">03</div>
+                    <h3>Python powered</h3>
+                    <p>Built entirely with Python, ensuring reliability, predictable behavior, and cross-platform compatibility.</p>
+                </div>
+                <div class="d-feature-card">
+                    <div class="d-feature-num mono">04</div>
+                    <h3>Secure storage</h3>
+                    <p>Backups can be stored locally or uploaded to remote servers — your choice, your control.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SCREENSHOTS ===== -->
+    <section id="screenshots" class="d-section d-section-alt">
+        <div class="d-container">
+            <div class="d-sec-head">
+                <span class="d-sec-eyebrow">Interface</span>
+                <h2 class="d-sec-title">Inside DB-Saver</h2>
+            </div>
+            <div class="d-screenshot-frame">
+                <div class="d-screenshot-bar">
+                    <span></span><span></span><span></span>
+                    <span class="d-screenshot-label mono">db-saver.exe</span>
+                </div>
+                <img src="assets/dbsaver.png" alt="DB-Saver application UI" class="d-screenshot-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="d-section d-contact">
+        <div class="d-container d-contact-inner">
+            <span class="d-sec-eyebrow">Contact</span>
+            <h2 class="d-sec-title">Want to know how it's built?</h2>
+            <p class="d-sec-sub" style="margin:0 auto 2rem">
+                Happy to walk through the backup engine architecture, restore logic, or the multi-driver design.
+            </p>
+            <a href="mailto:varun15ssrs@gmail.com" class="d-btn d-btn-primary big">Get in Touch</a>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="d-footer">
+        <div class="d-container d-footer-inner">
+            <span class="mono">DB-Saver</span>
+            <p>© 2025 DB-Saver · Designed &amp; Developed by <a href="https://github.com/VARUN15VS" target="_blank">Varun Saini</a></p>
+        </div>
     </footer>
 
     <script src="db.js"></script>

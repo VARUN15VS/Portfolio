@@ -3,86 +3,206 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>V-Media Player | Portfolio</title>
+    <title>V-Media Player | Watch, Stream & Resume — Varun Saini</title>
+    <meta name="description" content="V-Media Player is a Python & VLC-based media player with dual local/cloud playback, 5GB cloud storage, and JSON-based scene bookmarking.">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="vmedia.css">
 </head>
 <body>
-    <!-- Header Section -->
-    <header class="navbar">
-        <div class="logo">
-            <img src="assets/vplayer.png" alt="V-Media Player Logo">
-            <h1>V-Media Player</h1>
+
+    <!-- ===== NAVBAR ===== -->
+    <header class="v-nav" id="vNav">
+        <div class="v-container v-nav-inner">
+            <div class="v-logo">
+                <img src="assets/vplayer.png" alt="V-Media Player Logo">
+                <span>V-Media Player</span>
+            </div>
+            <nav class="v-nav-links">
+                <a href="#about">About</a>
+                <a href="#features">Features</a>
+                <a href="#screenshots">Screenshots</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <a href="#contact" class="v-nav-cta">Get in Touch</a>
+            <button class="v-nav-toggle" id="vNavToggle">☰</button>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#screenshots">Screenshots</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="v-nav-mobile" id="vNavMobile">
+            <a href="#about">About</a>
+            <a href="#features">Features</a>
+            <a href="#screenshots">Screenshots</a>
+            <a href="#contact">Contact</a>
+        </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-text">
-            <h2>Revolutionizing Media Experience</h2>
-            <p>Watch, Stream & Save Your Favorite Scenes Like Never Before</p>
-            <a href="#about" class="btn">Explore</a>
-        </div>
-        <div class="hero-img">
-            <img src="assets/vmediafinal (2).png" alt="V-Media Player Screenshot" class="vmedia-ui">
-        </div>
-    </section>
+    <!-- ===== HERO ===== -->
+    <section class="v-hero">
+        <div class="v-hero-glow"></div>
+        <div class="v-container v-hero-grid">
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <h2>About V-Media Player</h2>
-        <p>
-            V-Media Player is built using Python and VLC libraries. It works both 
-            locally for downloaded media and on the cloud, allowing users to upload 
-            up to <strong>5GB</strong> of media and stream directly.
-        </p>
-    </section>
+            <div class="v-hero-text">
+                <div class="v-eyebrow">
+                    <span class="v-eyebrow-dot"></span>
+                    Python · VLC · Local + Cloud
+                </div>
 
-    <!-- Features Section -->
-    <section id="features" class="features">
-        <h2>Unique Features</h2>
-        <div class="feature-list">
-            <div class="feature-card">
-                <h3>Dual Mode</h3>
-                <p>Play downloaded media or stream directly from our 5GB cloud storage.</p>
+                <h1>Pick up<br><span class="v-grad">exactly</span> where<br>you left off.</h1>
+
+                <p class="v-hero-sub">
+                    V-Media Player blends local and cloud playback into one app —
+                    stream from <strong>5GB of cloud storage</strong> or play downloaded
+                    media, and never lose your place in a scene again.
+                </p>
+
+                <div class="v-hero-actions">
+                    <a href="#about" class="v-btn v-btn-primary">Explore the Player</a>
+                    <a href="#screenshots" class="v-btn v-btn-ghost">View Screenshots</a>
+                </div>
             </div>
-            <div class="feature-card">
-                <h3>Timestamp Saving</h3>
-                <p>Save your favorite movie scenes or resume from where you left off.</p>
+
+            <!-- Cinematic player card — signature element -->
+            <div class="v-player-card">
+                <div class="v-player-screen">
+                    <div class="v-player-overlay">
+                        <button class="v-play-btn" id="vPlayBtn" aria-label="Play">
+                            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                        </button>
+                    </div>
+                    <div class="v-film-grain"></div>
+                    <span class="v-now-playing mono">NOW PLAYING · Scene 04</span>
+                </div>
+
+                <div class="v-player-controls">
+                    <div class="v-scrubber-row">
+                        <span class="v-time mono" id="vTimeCurrent">14:32</span>
+                        <div class="v-scrubber-track" id="vScrubberTrack">
+                            <div class="v-scrubber-fill" id="vScrubberFill"></div>
+                            <div class="v-scrubber-marker v-marker-saved" style="left:38%" title="Saved timestamp">
+                                <span class="v-marker-tooltip">Resume point · 14:32</span>
+                            </div>
+                            <div class="v-scrubber-marker v-marker-current" id="vScrubberThumb" style="left:38%"></div>
+                        </div>
+                        <span class="v-time mono">42:10</span>
+                    </div>
+
+                    <div class="v-player-meta mono">
+                        <span class="v-saved-badge">📌 Bookmark saved — JSON</span>
+                        <span>1080p · MP4</span>
+                    </div>
+                </div>
             </div>
-            <div class="feature-card">
-                <h3>JSON Based</h3>
-                <p>Your saved timestamps are stored securely on your local device in JSON format.</p>
+
+        </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section id="about" class="v-section">
+        <div class="v-container v-about-grid">
+            <div class="v-about-text">
+                <span class="v-sec-eyebrow">About</span>
+                <h2 class="v-sec-title">One player. Local and cloud, unified.</h2>
+                <p>
+                    V-Media Player is built using <strong>Python and the VLC library</strong>,
+                    designed to work seamlessly across both modes — locally for downloaded media,
+                    and on the cloud for content streamed directly from storage.
+                </p>
+                <p>
+                    Users can upload up to <strong>5GB of media</strong> and stream it directly,
+                    without ever needing a separate app for local versus cloud playback.
+                </p>
+            </div>
+            <div class="v-about-stats">
+                <div class="v-stat-card">
+                    <span class="v-stat-num mono">5GB</span>
+                    <span class="v-stat-label">Cloud storage included</span>
+                </div>
+                <div class="v-stat-card">
+                    <span class="v-stat-num mono">2</span>
+                    <span class="v-stat-label">Playback modes — local & cloud</span>
+                </div>
+                <div class="v-stat-card">
+                    <span class="v-stat-num mono">JSON</span>
+                    <span class="v-stat-label">Local timestamp storage</span>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Screenshots Section -->
-    <section id="screenshots" class="screenshots">
-        <h2>Project Screenshots</h2>
-        <div class="screenshot-grid">
-            <img src="assets/vmediafinal (2).png" alt="Media Player UI">
-            <img src="assets/vmedia-account.png" alt="Account Page">
+    <!-- ===== FEATURES ===== -->
+    <section id="features" class="v-section v-section-alt">
+        <div class="v-container">
+            <div class="v-sec-head">
+                <span class="v-sec-eyebrow">Capabilities</span>
+                <h2 class="v-sec-title">Built around how people actually watch</h2>
+                <p class="v-sec-sub">Three features that solve the part every other player gets wrong — losing your place.</p>
+            </div>
+
+            <div class="v-feature-grid">
+                <div class="v-feature-card">
+                    <div class="v-feature-icon">🎬</div>
+                    <h3>Dual mode</h3>
+                    <p>Play downloaded media offline, or stream directly from your 5GB cloud storage — same app, same interface.</p>
+                </div>
+                <div class="v-feature-card v-feature-highlight">
+                    <div class="v-feature-icon">📌</div>
+                    <h3>Timestamp saving</h3>
+                    <p>Save your favorite movie scenes or resume exactly where you left off — no more scrubbing to find your spot.</p>
+                    <span class="v-feature-tag">Signature Feature</span>
+                </div>
+                <div class="v-feature-card">
+                    <div class="v-feature-icon">🗂️</div>
+                    <h3>JSON-based storage</h3>
+                    <p>Your saved timestamps are stored securely on your local device in lightweight, portable JSON format.</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <h2>Contact</h2>
-        <p>If you'd like to collaborate or learn more, feel free to reach out.</p>
-        <a href="mailto:varun15ssrs@gmail.com" class="btn">Get in Touch</a>
+    <!-- ===== SCREENSHOTS ===== -->
+    <section id="screenshots" class="v-section">
+        <div class="v-container">
+            <div class="v-sec-head">
+                <span class="v-sec-eyebrow">Interface</span>
+                <h2 class="v-sec-title">Inside V-Media Player</h2>
+            </div>
+            <div class="v-screenshot-grid">
+                <div class="v-screenshot-frame">
+                    <div class="v-screenshot-bar">
+                        <span></span><span></span><span></span>
+                        <span class="v-screenshot-label mono">player.exe</span>
+                    </div>
+                    <img src="assets/vmediafinal (2).png" alt="V-Media Player UI">
+                </div>
+                <div class="v-screenshot-frame">
+                    <div class="v-screenshot-bar">
+                        <span></span><span></span><span></span>
+                        <span class="v-screenshot-label mono">account.exe</span>
+                    </div>
+                    <img src="assets/vmedia-account.png" alt="V-Media Player account page">
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 V-Media Player | Designed by Varun Saini</p>
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="v-section v-section-alt v-contact">
+        <div class="v-container v-contact-inner">
+            <span class="v-sec-eyebrow">Contact</span>
+            <h2 class="v-sec-title">Want to talk architecture?</h2>
+            <p class="v-sec-sub" style="margin:0 auto 2rem">
+                Curious about the cloud/local sync, VLC integration, or the JSON bookmarking system? Let's talk.
+            </p>
+            <a href="mailto:varun15ssrs@gmail.com" class="v-btn v-btn-primary big">Get in Touch</a>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="v-footer">
+        <div class="v-container v-footer-inner">
+            <span class="mono v-footer-brand">V-Media Player</span>
+            <p>© 2025 V-Media Player · Designed &amp; Developed by <a href="https://github.com/VARUN15VS" target="_blank">Varun Saini</a></p>
+        </div>
     </footer>
 
     <script src="vmedia.js"></script>
